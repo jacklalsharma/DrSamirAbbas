@@ -1,5 +1,6 @@
 package com.dr.SamirAbbas.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -9,11 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.dr.SamirAbbas.R;
 
-public class NavigationActivity extends AppCompatActivity
+public class NavigationActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    LinearLayout bookAppoinmentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +38,15 @@ public class NavigationActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        bookAppoinmentButton = (LinearLayout) findViewById(R.id.bookAppointmentButton);
+        bookAppoinmentButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), AvailableDoctorsListActivity.class));
+            }
+        });
+
     }
 
     @Override
@@ -48,7 +62,7 @@ public class NavigationActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.navigation, menu);
+        //sgetMenuInflater().inflate(R.menu.navigation, menu);
         return true;
     }
 

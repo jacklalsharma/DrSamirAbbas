@@ -14,4 +14,15 @@
     <string name="facilities">Facilities</string>
     <string name="gallery">Gallery</string>
     <string name="doctors">Doctors</string>
+    <string name="dr_samir_abbas_hospital">Dr.Samir Abbas Hospital</string>
+    <string name="dentist">Dentist</string>
+    <string name="available">Available Today</string>
+    <string name="unavailable">Not Available Today</string>
+    <string name="doc_name">Dr.Ayushmaan Gupta</string>
+    <string name="occupation">Dentist</string>
+    <string name="experience">12 Years experience</string>
+    <string name="qualification">MBBS</string>
+    <string name="appoinment_time_slot">Select a time slot</string>
+    <string name="weekly_schedule">Weekly Schedule</string>
+
 </resources>
