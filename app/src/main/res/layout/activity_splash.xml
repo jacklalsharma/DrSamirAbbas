@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@drawable/splash_background"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dr.SamirAbbas.activities.SplashActivity">
+
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:textColor="@color/white"
+            android:paddingBottom="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/language"
+            android:layout_weight="1"
+            android:id="@+id/arabic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <Button
+            android:textColor="@color/white"
+            android:paddingBottom="@dimen/_7sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/language"
+            android:layout_weight="1"
+            android:id="@+id/english"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
