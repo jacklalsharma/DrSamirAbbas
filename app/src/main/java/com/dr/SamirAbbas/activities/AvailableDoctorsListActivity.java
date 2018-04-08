@@ -6,8 +6,13 @@ import android.support.annotation.RequiresApi;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.dr.SamirAbbas.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AvailableDoctorsListActivity extends BaseActivity{
 
@@ -28,6 +33,14 @@ public class AvailableDoctorsListActivity extends BaseActivity{
                 startActivity(new Intent(getActivity(), NavigationActivity.class));
             }
         });
+
+        Spinner spinner = (Spinner) findViewById(R.id.docOccupationSpinner);
+        List<String> list = new ArrayList<>();
+        list.add("Dentist");
+        list.add("CardioLogist");
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
+        mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(mAdapter);
 
 
     }

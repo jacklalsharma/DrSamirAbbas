@@ -25,7 +25,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".activities.AvailableDoctorsListActivity" />
         <activity android:name=".activities.DoctorDetailsActivity" />
-        <activity android:name=".activities.AppoinmentTimeSlotActivity"></activity>
+        <activity android:name=".activities.AppoinmentTimeSlotActivity" />
+        <activity android:name=".activities.FetchDateActivity"></activity>
     </application>
 
 </manifest>

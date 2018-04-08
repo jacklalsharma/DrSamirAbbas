@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f6f6f6"
+    tools:context="com.dr.SamirAbbas.activities.FetchDateActivity">
+
+    <ImageButton
+        android:id="@+id/leftSwipe"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_marginLeft="@dimen/_3sdp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_width="@dimen/_15sdp"
+        android:src="@drawable/left_swipe"
+        android:layout_height="@dimen/_15sdp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/dateRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_toRightOf="@+id/leftSwipe"
+        android:layout_toLeftOf="@+id/rightSwipe"
+        android:layout_height="wrap_content">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/rightSwipe"
+        android:background="?android:attr/selectableItemBackground"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/_3sdp"
+        android:src="@drawable/right_swipe"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp" />
+
+</RelativeLayout>
