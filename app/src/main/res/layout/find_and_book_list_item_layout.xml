@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f6f6f6">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/forwardImageView"
+        >
+
+        <TextView
+            android:id="@+id/indexTextView"
+            android:background="@drawable/circle_text_blue"
+            android:text="W"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_5sdp"
+            android:textSize="@dimen/_15sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:id="@+id/docNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/women_health"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:background="@color/white"
+        android:id="@+id/forwardImageView"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:src="@drawable/arrow_next"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_height="@dimen/_50sdp"
+        />
+</RelativeLayout>

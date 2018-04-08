@@ -26,6 +26,9 @@
     <string name="weekly_schedule">Weekly Schedule</string>
     <string name="month">MARCH</string>
     <string name="selected_date">Today</string>
-
+    <string name="find_and_book">Find \u0026 Book</string>
+    <string name="search_doc">Search a doctor</string>
+    <string name="choose_specialist">Choose Specialist</string>
+    <string name="women_health">Women Health</string>
 
 </resources>
