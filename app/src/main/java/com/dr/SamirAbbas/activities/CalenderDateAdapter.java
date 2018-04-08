@@ -1,11 +1,12 @@
 package com.dr.SamirAbbas.activities;
 
 import android.content.Context;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
 import android.widget.TextView;
 
 import com.dr.SamirAbbas.R;
@@ -15,15 +16,16 @@ import java.util.ArrayList;
 /**
  * Created by Anurag on 4/8/2018.
  */
-
 public class CalenderDateAdapter extends RecyclerView.Adapter<CalenderDateAdapter.DateViewHolder>{
 
     private ArrayList<CalenderDate> list;
-    Context mContext;
+    private Context mContext;
+    private int initialPos;
 
     public CalenderDateAdapter(ArrayList<CalenderDate> list, Context mContext) {
         this.list = list;
         this.mContext = mContext;
+        initialPos = 0;
     }
 
     @Override
@@ -33,9 +35,41 @@ public class CalenderDateAdapter extends RecyclerView.Adapter<CalenderDateAdapte
         return dateViewHolder;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
-    public void onBindViewHolder(DateViewHolder holder, int position) {
-        holder.dateTextView.setText(list.get(position).getDate());
+    public void onBindViewHolder(final DateViewHolder holder, final int position) {
+        holder.dateTextView.setText(list.get(position).getDate() + "");
+
+        holder.dateTextView.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                if(list.get(position).isSelected()) {
+
+                    view.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.white));
+                    holder.dateTextView.setTextColor(mContext.getResources().getColor(R.color.textGray));
+                    list.get(position).setSelected(false);
+                } else {
+                    view.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.blue));
+                    list.get(position).setSelected(true);
+                    holder.dateTextView.setTextColor(mContext.getResources().getColor(R.color.white));
+
+                    if(initialPos!=position) {
+                        list.get(initialPos).setSelected(false);
+                        notifyItemChanged(initialPos);
+                    }
+                    initialPos = position;
+                }
+            }
+        });
+        if(list.get(position).isSelected()) {
+            holder.dateTextView.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.blue));
+            holder.dateTextView.setTextColor(mContext.getResources().getColor(R.color.white));
+        }
+        else {
+            holder.dateTextView.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.white));
+            holder.dateTextView.setTextColor(mContext.getResources().getColor(R.color.textGray));
+        }
     }
 
     @Override

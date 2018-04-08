@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +22,13 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
                 <TextView
+                    android:layout_alignParentStart="true"
                     android:textStyle="bold"
                     android:textSize="@dimen/_14sdp"
                     android:layout_centerVertical="true"
@@ -28,6 +36,8 @@
                     android:text="@string/appoinment_time_slot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+            </RelativeLayout>
+
 
         </android.support.v7.widget.Toolbar>
 
@@ -52,6 +62,7 @@
 
 
         <LinearLayout
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -122,26 +133,265 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <android.support.v4.widget.NestedScrollView
         android:layout_below="@+id/docInfoLayout"
-        android:id="@+id/calenderLayout"
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_100sdp"
-        android:layout_margin="@dimen/_25sdp"
-        android:background="@color/white">
 
-        <TextView
-            android:text="@string/weekly_schedule"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/_10sdp"
-            android:layout_width="wrap_content"
-            android:textColor="@color/cal_orange"
-            android:textStyle="bold"
-            android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/calenderLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/cal_background">
+
+                <TextView
+                    android:id="@+id/weeklySchedule"
+                    android:text="@string/weekly_schedule"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/cal_orange"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_below="@+id/weeklySchedule"
+                    android:id="@+id/calPickerLayout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/calenderButton"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:scaleType="fitXY"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:src="@drawable/ic_calender"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/monthTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_14sdp"
+                        android:text="@string/month"/>
+                </LinearLayout>
 
 
+                <include
+                    layout="@layout/activity_fetch_date"
+                    android:id="@+id/fetchingDateLayout"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:layout_below="@+id/calPickerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_25sdp">
+
+                </include>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/selectedDateTextView"
+                    android:layout_below="@+id/fetchingDateLayout"
+                    android:textColor="@color/blue"
+                    android:text="@string/selected_date"
+                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:textSize="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/calenderLayout"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/morningLayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#f6f6f6"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_morning"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Morning"
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/morningRecyclerView"
+                            android:layout_below="@+id/text1"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
 
 
-    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/morningLayout"
+                    android:id="@+id/afternoonLayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#f6f6f6"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_afternoon"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Afternoon"
+                            android:id="@+id/text2"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/afternoonRecyclerView"
+                            android:layout_below="@+id/text2"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/afternoonLayout"
+                    android:id="@+id/eveningLayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#f6f6f6"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_evening"/>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Evening"
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/eveningRecyclerView"
+                            android:layout_below="@+id/text3"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@+id/eveningLayout"
+                    android:id="@+id/nightLayout"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="#f6f6f6"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:src="@drawable/ic_night"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="Night"
+                            android:id="@+id/text4"
+                            android:layout_width="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_height="wrap_content" />
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/nightRecyclerView"
+                            android:layout_below="@+id/text4"
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/logo"
+        android:layout_height="@dimen/_77sdp" />
+
 </RelativeLayout>

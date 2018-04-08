@@ -24,5 +24,8 @@
     <string name="qualification">MBBS</string>
     <string name="appoinment_time_slot">Select a time slot</string>
     <string name="weekly_schedule">Weekly Schedule</string>
+    <string name="month">MARCH</string>
+    <string name="selected_date">Today</string>
+
 
 </resources>

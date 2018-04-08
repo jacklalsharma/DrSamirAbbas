@@ -16,4 +16,5 @@
     <color name="test">#221224</color>
     <color name="defaultContentColor">@android:color/black</color>
     <color name="defaultBorderFlagColor">@android:color/transparent</color>
+    <color name="background">#f6f6f6</color>
 </resources>
