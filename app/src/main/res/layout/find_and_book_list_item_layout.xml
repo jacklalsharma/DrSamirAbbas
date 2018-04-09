@@ -1,59 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:background="@android:color/darker_gray"
     android:layout_height="wrap_content"
-    android:background="@color/white"
     android:layout_marginBottom="@dimen/_10sdp">
 
     <LinearLayout
-        android:id="@+id/layout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#f6f6f6"
-        android:layout_margin="1px"
-        android:layout_toLeftOf="@+id/forwardImageView"
-        >
-
-        <TextView
-            android:id="@+id/indexTextView"
-            android:background="@drawable/circle_text_blue"
-            android:text="W"
-            android:gravity="center"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/_6sdp"
-            android:textSize="@dimen/_12sdp"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp" />
-
-        <TextView
-            android:id="@+id/docNameTextView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/women_health"
-            android:paddingLeft="@dimen/_5sdp"
-            android:paddingRight="@dimen/_5sdp"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@color/black"
-            android:background="@color/white"
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:gravity="center"/>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/forwardImageView"
         android:clickable="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="@dimen/_20sdp"
-        android:padding="@dimen/_5sdp"
-        android:layout_centerVertical="true"
-        android:src="@drawable/arrow_next"
         android:background="?android:attr/selectableItemBackground"
-        android:layout_height="@dimen/_25sdp"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_margin="1px"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f6f6f6"
+                android:layout_margin="1px"
+                android:layout_toLeftOf="@+id/forwardImageView"
+                >
+
+                <TextView
+                    android:id="@+id/indexTextView"
+                    android:background="@drawable/circle_text_blue"
+                    android:text="W"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp" />
+
+                <TextView
+                    android:id="@+id/docNameTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/women_health"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:textColor="@color/black"
+                    android:background="@color/white"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/forwardImageView"
+                android:layout_alignParentEnd="true"
+                android:layout_width="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/arrow_next"
+                android:layout_height="@dimen/_25sdp"
+                />
+        </RelativeLayout>
+    </LinearLayout>
 
 
 
