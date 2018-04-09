@@ -16,9 +16,10 @@ import android.widget.LinearLayout;
 import com.dr.SamirAbbas.R;
 
 public class NavigationActivity extends BaseActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
 
-    LinearLayout bookAppointmentButton;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,14 +40,12 @@ public class NavigationActivity extends BaseActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        bookAppointmentButton = (LinearLayout) findViewById(R.id.bookAppointmentButton);
-        bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), FindAndBookActivity.class));
-            }
-        });
 
+        findViewById(R.id.bookAppointmentButton).setOnClickListener(this);
+        findViewById(R.id.docSearchLayout).setOnClickListener(this);
+        findViewById(R.id.servicesLayout).setOnClickListener(this);
+        findViewById(R.id.galleryLayout).setOnClickListener(this);
+        findViewById(R.id.facilitiesLayout).setOnClickListener(this);
     }
 
     @Override
@@ -104,5 +103,21 @@ public class NavigationActivity extends BaseActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.docSearchLayout) {
+            startActivity(new Intent(getActivity(), DoctorSearchListActivity.class));
+
+        } else if(view.getId() == R.id.facilitiesLayout) {
+
+        } else if(view.getId() == R.id.galleryLayout) {
+
+        } else if(view.getId() == R.id.servicesLayout) {
+
+        } else if(view.getId() == R.id.bookAppointmentButton) {
+            startActivity(new Intent(getActivity(), FindAndBookActivity.class));
+        }
     }
 }

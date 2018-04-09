@@ -41,5 +41,11 @@
     <string name="national_id">National Id/QMA</string>
     <string name="insurance_no">Insurance Number</string>
     <string name="confirm">CONFIRM</string>
+    <string name="doctor">Doctor</string>
+    <string name="thank_you">Thank You</string>
+    <string name="booking_confirmed">Your Booking Has been Confirmed</string>
+    <string name="booking_id">Booking ID</string>
+    <string name="save">Save</string>
+    <string name="done">Done</string>
 
 </resources>

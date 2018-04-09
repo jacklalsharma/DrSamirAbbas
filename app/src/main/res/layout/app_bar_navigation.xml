@@ -123,6 +123,8 @@
             android:orientation="horizontal">
 
             <LinearLayout
+                android:clickable="true"
+                android:id="@+id/docSearchLayout"
                 android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
                 android:background="@color/white"
@@ -130,7 +132,7 @@
                 android:layout_height="match_parent">
 
                 <LinearLayout
-                    android:clickable="true"
+
                     android:orientation="vertical"
                     android:background="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
@@ -156,6 +158,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:clickable="true"
+                android:id="@+id/servicesLayout"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
@@ -201,6 +205,8 @@
         android:orientation="horizontal">
 
         <LinearLayout
+            android:clickable="true"
+            android:id="@+id/facilitiesLayout"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_2sdp"
             android:layout_weight="1"
@@ -234,6 +240,8 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
+            android:clickable="true"
+            android:id="@+id/galleryLayout"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_2sdp"
             android:layout_weight="1"
