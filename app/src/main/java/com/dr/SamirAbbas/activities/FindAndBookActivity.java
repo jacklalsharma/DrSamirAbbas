@@ -1,15 +1,27 @@
 package com.dr.SamirAbbas.activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
+
 import com.dr.SamirAbbas.R;
 
+import java.util.ArrayList;
+
+
 public class FindAndBookActivity extends BaseActivity {
+
+    private ArrayList<FindAndBook> mList;
+    private FindAndBookAdapter adapter;
+    private RecyclerView recyclerView;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,5 +41,32 @@ public class FindAndBookActivity extends BaseActivity {
                 startActivity(new Intent(getActivity(), NavigationActivity.class));
             }
         });
+
+
+        mList = new ArrayList<>();
+        adapter = new FindAndBookAdapter(mList, getActivity());
+        recyclerView = findViewById(R.id.categoryRecyclerView);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(adapter);
+
+        prepareList();
+
+        adapter.notifyDataSetChanged();
+
+    }
+
+
+
+    public void prepareList() {
+        FindAndBook fb = new FindAndBook("DENTIST");
+        mList.add(fb);
+
+        fb = new FindAndBook("WOMEN HEALTH");
+        mList.add(fb);
+
+        fb = new FindAndBook("SURGERY");
+        mList.add(fb);
     }
 }

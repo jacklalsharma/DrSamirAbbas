@@ -38,7 +38,8 @@ public class AvailableDoctorsListActivity extends BaseActivity{
         Spinner spinner = (Spinner) findViewById(R.id.docOccupationSpinner);
         List<String> list = new ArrayList<>();
         list.add("Dentist");
-        list.add("CardioLogist");
+        list.add("Women Health");
+        list.add("Surgery");
         ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, list);
         mAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(mAdapter);

@@ -1,20 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.dr.SamirAbbas.NavigationActivity"
-    tools:showIn="@layout/app_bar_navigation">
+    android:background="@color/white"
+    >
 
-    <TextView
-        android:layout_width="wrap_content"
+
+    <ImageView
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/nav_samir_abbas" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/homeLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/label"
+       >
 
-</android.support.constraint.ConstraintLayout>
+        <ImageView
+            android:src="@drawable/nav_home"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image1"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/home"
+            android:layout_toRightOf="@+id/image1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image1"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/aboutUSLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/homeLayout"
+        >
+
+        <ImageView
+            android:src="@drawable/nav_about_us"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image2"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/About_us"
+            android:layout_toRightOf="@+id/image2"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image2"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/servicesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/aboutUSLayout">
+
+        <ImageView
+            android:src="@drawable/nav_services"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image3"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/services"
+            android:layout_toRightOf="@+id/image3"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image3"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/facilitiesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/servicesLayout">
+
+        <ImageView
+            android:src="@drawable/nav_facilities"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image4"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/facilities"
+            android:layout_toRightOf="@+id/image4"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image4"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/galleryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/facilitiesLayout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:src="@drawable/nav_gallery"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image5"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/gallery"
+            android:layout_toRightOf="@+id/image5"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image5"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/shareLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/contactLayout"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:src="@drawable/nav_share_app"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image6"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/share_app"
+            android:layout_toRightOf="@+id/image6"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image6"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contactLayout"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:src="@drawable/nav_contact_us"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:padding="@dimen/_10sdp"
+            android:id="@+id/image7"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp" />
+
+        <TextView
+            android:text="@string/contact_us"
+            android:layout_toRightOf="@+id/image7"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:textSize="@dimen/_12sdp"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_height="@dimen/_35sdp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/image7"
+            android:src="@drawable/nav_strip"
+            />
+    </RelativeLayout>
+</RelativeLayout>

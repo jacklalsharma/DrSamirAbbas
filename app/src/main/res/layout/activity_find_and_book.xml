@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f6f6f6"
-    tools:context="com.dr.SamirAbbas.activities.FindAndBookActivity">
+    android:background="#f6f6f6">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -49,16 +48,17 @@
         android:layout_height="@dimen/_4sdp" />
 
     <EditText
-        android:background="@color/white"
+
         android:id="@+id/searchDocText"
-        android:gravity="center"
-        android:drawableStart="@drawable/search_icon"
-        android:layout_margin="@dimen/_10sdp"
-        android:hint="@string/search_doc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/strip"
+        android:layout_margin="@dimen/_10sdp"
+
+        android:gravity="center"
+        android:hint="@string/search_doc"
         android:inputType="textAutoComplete"
-        android:layout_below="@+id/strip"/>
+        android:singleLine="false" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,17 +81,19 @@
         android:layout_below="@+id/orTextView"/>
 
 
-    <ListView
-        android:id="@+id/categoryListView"
-        android:layout_below="@+id/chooseTextView"
-        android:layout_width="match_parent"
-        android:layout_margin="@dimen/_10sdp"
-        android:layout_height="match_parent"></ListView>
-
     <ImageView
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:src="@drawable/logo"
         android:layout_width="@dimen/_70sdp"
         android:layout_height="@dimen/_77sdp" />
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/categoryRecyclerView"
+       android:layout_below="@+id/chooseTextView"
+       android:layout_width="match_parent"
+       android:layout_margin="@dimen/_10sdp"
+       android:layout_height="match_parent">
+
+   </android.support.v7.widget.RecyclerView>
 </RelativeLayout>

@@ -18,7 +18,7 @@ import com.dr.SamirAbbas.R;
 public class NavigationActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    LinearLayout bookAppoinmentButton;
+    LinearLayout bookAppointmentButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,11 +39,11 @@ public class NavigationActivity extends BaseActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        bookAppoinmentButton = (LinearLayout) findViewById(R.id.bookAppointmentButton);
-        bookAppoinmentButton.setOnClickListener(new View.OnClickListener() {
+        bookAppointmentButton = (LinearLayout) findViewById(R.id.bookAppointmentButton);
+        bookAppointmentButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), AvailableDoctorsListActivity.class));
+                startActivity(new Intent(getActivity(), FindAndBookActivity.class));
             }
         });
 
