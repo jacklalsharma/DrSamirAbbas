@@ -7,16 +7,15 @@ import android.widget.LinearLayout;
 
 import com.dr.SamirAbbas.R;
 
-public class FacilitiesActivity extends BaseActivity implements View.OnClickListener{
+public class ServicesActivity extends BaseActivity implements View.OnClickListener {
 
     private LinearLayout innerLayout, innerLayout2, innerLayout3, innerLayout4;
     private boolean isOpen, isOpen2, isOpen3, isOpen4;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facilities);
+        setContentView(R.layout.activity_services);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

@@ -1,8 +1,5 @@
 package com.dr.SamirAbbas.activities;
 
-import android.widget.ImageView;
-import android.widget.TextView;
-
 /**
  * Created by Anurag on 4/9/2018.
  */

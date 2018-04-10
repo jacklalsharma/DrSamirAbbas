@@ -28,7 +28,12 @@
         <activity android:name=".activities.FindAndBookActivity" />
         <activity android:name=".activities.SummaryActivity" />
         <activity android:name=".activities.DoctorSearchListActivity" />
-        <activity android:name=".activities.SaveBookingActivity"></activity>
+        <activity android:name=".activities.SaveBookingActivity" />
+        <activity android:name=".activities.FacilitiesActivity" />
+        <activity android:name=".activities.GalleryActivity" />
+        <activity android:name=".activities.PatientDetailsActivity" />
+        <activity android:name=".activities.ContactUsActivity" />
+        <activity android:name=".activities.ServicesActivity"></activity>
     </application>
 
 </manifest>

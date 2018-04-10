@@ -60,30 +60,27 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawer.openDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.openDrawer(GravityCompat.START);
+                return true;
+
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -92,10 +89,12 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
             startActivity(new Intent(getActivity(), DoctorSearchListActivity.class));
 
         } else if(view.getId() == R.id.facilitiesLayout) {
+            startActivity(new Intent(getActivity(), FacilitiesActivity.class));
 
         } else if(view.getId() == R.id.galleryLayout) {
-
+            startActivity(new Intent(getActivity(), GalleryActivity.class));
         } else if(view.getId() == R.id.servicesLayout) {
+            startActivity(new Intent(getActivity(), ServicesActivity.class));
 
         } else if(view.getId() == R.id.bookAppointmentButton) {
             startActivity(new Intent(getActivity(), FindAndBookActivity.class));

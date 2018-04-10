@@ -1,9 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dr.SamirAbbas.activities.ContactUsActivity">
+    android:background="#f6f6f6"
+    tools:context="com.dr.SamirAbbas.activities.AppointmentTimeSlotActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/orange"
+                    android:text="@string/contact_us_lc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ImageView
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/logo"
+        android:layout_height="@dimen/_77sdp" />
+
+    <ImageView
+        android:id="@+id/strip"
+        android:background="@drawable/strip"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_below="@+id/strip"
+        android:background="@drawable/contact_us_samir_abbas"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/image"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:padding="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="@string/adress"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/nav_strip"
+               />
+
+            <TextView
+                android:id="@+id/addressTextView"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="AL KURNAYUSH RD,ASH SHATI,6906 AL KURNAYUSH RD ASH SHATI DISTRICT JEDDAH 234113597,JEDDAH 234113597,SAUDI ARABIA "/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="@string/phone_no"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/nav_strip"
+                />
+
+            <TextView
+                android:id="@+id/numberTextView"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text=" + 966126187777"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange"
+                android:text="@string/email"/>
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:background="@drawable/nav_strip"
+                />
+
+            <TextView
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold"
+                android:text="BADAR.ABBAS@DSHAH.SA"/>
+        </LinearLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

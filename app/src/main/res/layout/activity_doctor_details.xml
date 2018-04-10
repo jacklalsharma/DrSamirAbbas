@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="#f6f6f6"
-    tools:context="com.dr.SamirAbbas.activities.DoctorDetailsActivity">
+    >
 
     <LinearLayout
         android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignRight="@+id/docNameTextView"
-                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_15sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:backgroundTint="@color/blue"
                 android:text="Book" />
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/bookAppointmentButton"
-                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_10sdp"
                 android:text="@string/available"
                 android:textColor="@color/orange"
                 android:textSize="14sp" />

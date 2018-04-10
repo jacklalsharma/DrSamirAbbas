@@ -13,6 +13,7 @@
     <color name="whitegrey">#F9F9F9</color>
     <color name="blue">#3c7fd1</color>
     <color name="cal_orange">#ff640f</color>
+
     <color name="test">#221224</color>
     <color name="defaultContentColor">@android:color/black</color>
     <color name="defaultBorderFlagColor">@android:color/transparent</color>

@@ -31,7 +31,7 @@
                     android:textSize="@dimen/_14sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
-                    android:text="@string/facilities_lc"
+                    android:text="@string/services_lc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
@@ -49,6 +49,7 @@
         android:layout_height="@dimen/_4sdp" />
 
 
+
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_below="@+id/strip"
@@ -62,11 +63,11 @@
                 android:id="@+id/banner"
                 android:layout_below="@+id/strip"
                 android:scaleType="fitXY"
-                android:src="@drawable/facilities_banner"
+                android:src="@drawable/sevices_samir_abbas_hospital"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp" />
-
             <LinearLayout
+
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:orientation="vertical"
@@ -96,7 +97,7 @@
                         <TextView
 
                             android:background="@drawable/circle_text_blue"
-                            android:text="A"
+                            android:text="C"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/white"
@@ -107,9 +108,10 @@
                             android:layout_height="@dimen/_20sdp" />
 
                         <TextView
+
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="Air Ambulance"
+                            android:text="Critical Care Units"
                             android:textSize="@dimen/_13sdp"
                             android:textColor="@color/black"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -135,7 +137,7 @@
                     android:layout_width="match_parent"
                     android:scaleType="fitXY"
                     android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/facilities_image"
+                    android:src="@drawable/sercices_samir_assab"
                     android:visibility="gone"
                     />
 
@@ -185,7 +187,7 @@
                         <TextView
 
                             android:background="@drawable/circle_text_blue"
-                            android:text="E"
+                            android:text="P"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/white"
@@ -199,7 +201,7 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/emergency_trauma"
+                            android:text="Patient Support Services"
                             android:textSize="@dimen/_13sdp"
                             android:textColor="@color/black"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -225,7 +227,7 @@
                     android:layout_width="match_parent"
                     android:scaleType="fitXY"
                     android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/facilities_image"
+                    android:src="@drawable/sercices_samir_assab"
                     android:visibility="gone"
                     />
 
@@ -274,7 +276,7 @@
                         <TextView
 
                             android:background="@drawable/circle_text_blue"
-                            android:text="W"
+                            android:text="e"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/white"
@@ -288,7 +290,7 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:text="@string/Wards_and_rooms"
+                            android:text="e-CLINIC-Telemedicine Services"
                             android:textSize="@dimen/_13sdp"
                             android:textColor="@color/black"
                             android:layout_marginLeft="@dimen/_5sdp"
@@ -314,7 +316,7 @@
                     android:layout_width="match_parent"
                     android:scaleType="fitXY"
                     android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/facilities_image"
+                    android:src="@drawable/sercices_samir_assab"
                     android:visibility="gone"
                     />
 
@@ -363,7 +365,7 @@
                         <TextView
 
                             android:background="@drawable/circle_text_blue"
-                            android:text="W"
+                            android:text="L"
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:textColor="@color/white"
@@ -377,11 +379,11 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:gravity="center_vertical"
-                            android:text="WOMEN HEALTH"
+                            android:text="@string/lab_test"
+                            android:textSize="@dimen/_13sdp"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/_13sdp" />
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:gravity="center_vertical"/>
 
                     </LinearLayout>
 
@@ -403,7 +405,7 @@
                     android:layout_width="match_parent"
                     android:scaleType="fitXY"
                     android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/facilities_image"
+                    android:src="@drawable/sercices_samir_assab"
                     android:visibility="gone"
                     />
 

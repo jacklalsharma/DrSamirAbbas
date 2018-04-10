@@ -1,14 +1,10 @@
 package com.dr.SamirAbbas.activities;
 
-import android.content.Intent;
-
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
-
 
 import com.dr.SamirAbbas.R;
 
@@ -38,7 +34,7 @@ public class FindAndBookActivity extends BaseActivity {
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), NavigationActivity.class));
+                onBackPressed();
             }
         });
 

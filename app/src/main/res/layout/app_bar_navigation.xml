@@ -158,8 +158,6 @@
             </LinearLayout>
 
             <LinearLayout
-                android:clickable="true"
-                android:id="@+id/servicesLayout"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/_2sdp"
                 android:layout_weight="1"
@@ -167,6 +165,7 @@
                 android:layout_width="match_parent">
 
                 <LinearLayout
+                    android:id="@+id/servicesLayout"
                     android:clickable="true"
                     android:orientation="vertical"
                     android:layout_weight="1"
@@ -205,8 +204,6 @@
         android:orientation="horizontal">
 
         <LinearLayout
-            android:clickable="true"
-            android:id="@+id/facilitiesLayout"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_2sdp"
             android:layout_weight="1"
@@ -214,6 +211,7 @@
             android:layout_width="match_parent">
 
             <LinearLayout
+                android:id="@+id/facilitiesLayout"
                 android:clickable="true"
                 android:orientation="vertical"
                 android:layout_weight="1"
@@ -240,14 +238,13 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout
-            android:clickable="true"
-            android:id="@+id/galleryLayout"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_2sdp"
             android:layout_weight="1"
             android:background="@color/white"
             android:layout_width="match_parent">
            <LinearLayout
+               android:id="@+id/galleryLayout"
                android:clickable="true"
                android:orientation="vertical"
                android:layout_weight="1"
