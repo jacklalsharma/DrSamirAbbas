@@ -33,7 +33,7 @@
                     android:textSize="@dimen/_14sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
-                    android:text="@string/summary"
+                    android:text="@string/confirmation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
@@ -136,10 +136,11 @@
                     android:id="@+id/bookingIdTextView"
                     android:layout_below="@+id/textView"
                     android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_marginLeft="@dimen/_95sdp"
+                    android:layout_marginLeft="@dimen/_90sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1256BC45"
+                    android:paddingRight="@dimen/_5sdp"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10sdp"
                     />
@@ -150,7 +151,7 @@
                     android:layout_toRightOf="@+id/bookingIdTextView"
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:layout_marginLeft="@dimen/_50sdp"
+                    android:layout_marginLeft="@dimen/_35sdp"
                     android:text="@string/save"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10sdp"

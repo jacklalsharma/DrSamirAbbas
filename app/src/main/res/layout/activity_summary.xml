@@ -190,6 +190,7 @@
                             android:textColor="@color/orange" />
 
                         <TextView
+                            android:id="@+id/date"
                             android:layout_below="@+id/text"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_width="wrap_content"
@@ -215,6 +216,7 @@
                             android:textColor="@color/orange"
                             android:text="@string/time"/>
                         <TextView
+                            android:id="@+id/time_slot"
                             android:layout_below="@+id/text1"
                             android:layout_marginTop="@dimen/_5sdp"
                             android:layout_width="wrap_content"

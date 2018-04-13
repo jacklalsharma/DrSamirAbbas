@@ -58,4 +58,12 @@ public class CalenderDate {
     public String toString() {
         return "" + year + "/" + month + "/" + date;
     }
+
+    public String getProperDate(){
+        String[] monthName = {"January", "February",
+                "March", "April", "May", "June", "July",
+                "August", "September", "October", "November",
+                "December"};
+        return date + " " + monthName[month - 1] + " " + year;
+    }
 }

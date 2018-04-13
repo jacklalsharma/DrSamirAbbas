@@ -34,6 +34,7 @@
     <string name="share_app">SHARE APP</string>
     <string name="contact_us">CONTACT US</string>
     <string name="summary">Summary</string>
+    <string name="confirmation">Confirmation</string>
     <string name="date">Date</string>
     <string name="time">Time</string>
     <string name="name">NAME</string>
@@ -69,4 +70,11 @@
     <string name="afternoon">Afternoon</string>
     <string name="evening">Evening</string>
     <string name="night">Night</string>
+    <string name="slot_not_selected">Select a slot for booking</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_number">Enter mobile number</string>
+    <string name="enter_id">Enter national ID</string>
+    <string name="enter_isn_number">Enter insurance number</string>
+    <string name="booking_failed">Failed to book the appointment, try again</string>
+    <string name="screenshot_captured">Screenshot captured</string>
 </resources>

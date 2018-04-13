@@ -1,5 +1,6 @@
 package com.dr.SamirAbbas.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -77,6 +78,13 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
         ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
         ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
         Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
+
+        findViewById(R.id.bookAppointmentButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                proceedWithBooking();
+            }
+        });
 
     }
 
@@ -304,6 +312,70 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                     return;
                 }
             }
+        }
+    }
+
+    private void proceedWithBooking(){
+        boolean slotSelected = false;
+        AppointmentSlot.Morning slot = null;
+        if(mList4 != null){
+            for(int i = 0 ; i < mList4.size() ; ++i){
+                if(mList4.get(i).isSelected()){
+                   slotSelected = true;
+                   slot = mList4.get(i);
+                   break;
+                }
+            }
+        }
+
+        if(mList3 != null){
+            for(int i = 0 ; i < mList3.size() ; ++i){
+                if(mList3.get(i).isSelected()){
+                    slotSelected = true;
+                    slot = mList3.get(i);
+                    break;
+                }
+            }
+        }
+
+        if(mList2 != null){
+            for(int i = 0 ; i < mList2.size() ; ++i){
+                if(mList2.get(i).isSelected()){
+                    slotSelected = true;
+                    slot = mList2.get(i);
+                    break;
+                }
+            }
+        }
+
+        if(mList1 != null){
+            for(int i = 0 ; i < mList1.size() ; ++i){
+                if(mList1.get(i).isSelected()){
+                    slotSelected = true;
+                    slot = mList1.get(i);
+                    break;
+                }
+            }
+        }
+
+        if(slotSelected){
+
+            String date = "";
+            for(int i = 0 ; i < dateArrayList.size() ; ++i){
+                if(dateArrayList.get(i).isSelected()){
+                    date = dateArrayList.get(i).getProperDate();
+                    break;
+                }
+            }
+
+            Intent intent = new Intent(this, PatientDetailsActivity.class);
+            intent.putExtra("doctor", doctor);
+            intent.putExtra("slot", slot);
+            intent.putExtra("date", date);
+            intent.putExtra("speciality", getIntent().getStringExtra("speciality"));
+            startActivity(intent);
+        }else{
+            Toast.makeText(getActivity(), R.string.slot_not_selected, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dr.SamirAbbas">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".DrApplication"
         android:allowBackup="true"
@@ -22,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:launchMode="singleTask"
             android:name=".activities.NavigationActivity"
             android:screenOrientation="portrait" />
 

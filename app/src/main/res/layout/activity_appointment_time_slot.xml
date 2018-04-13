@@ -133,6 +133,7 @@
     </LinearLayout>
 
     <android.support.v4.widget.NestedScrollView
+        android:layout_above="@+id/bookAppointmentButton"
         android:layout_below="@+id/docInfoLayout"
         android:layout_width="match_parent"
 
@@ -391,10 +392,22 @@
     </android.support.v4.widget.NestedScrollView>
 
     <ImageView
+        android:visibility="gone"
         android:layout_alignParentEnd="true"
         android:layout_width="@dimen/_70sdp"
         android:layout_alignParentBottom="true"
         android:src="@drawable/logo"
         android:layout_height="@dimen/_77sdp" />
+
+    <Button
+        android:layout_margin="@dimen/_3sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/bookAppointmentButton"
+        android:textColor="@color/dark_green"
+        android:background="@drawable/btn_border_green"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:text="Book" />
 
 </RelativeLayout>

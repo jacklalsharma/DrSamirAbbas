@@ -208,7 +208,7 @@
                     android:layout_height="@dimen/_35sdp"
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:hint="@string/mobile_no_lc"
-                    android:inputType="text"
+                    android:inputType="number"
                     android:singleLine="false" />
             </LinearLayout>
 
