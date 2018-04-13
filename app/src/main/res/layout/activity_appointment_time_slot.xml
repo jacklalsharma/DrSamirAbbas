@@ -98,7 +98,6 @@
                 android:id="@+id/docNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
                 android:layout_alignParentTop="true"
                 android:layout_alignStart="@+id/occupationTextView"
                 android:text="@string/doc_name"
@@ -246,7 +245,8 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:text="Morning"
+                            android:textAlignment="center"
+                            android:text="@string/morning"
                             android:id="@+id/text1"
                             android:layout_width="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -286,7 +286,8 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:text="Afternoon"
+                            android:textAlignment="center"
+                            android:text="@string/afternoon"
                             android:id="@+id/text2"
                             android:layout_width="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -327,7 +328,8 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:text="Evening"
+                            android:textAlignment="center"
+                            android:text="@string/evening"
                             android:id="@+id/text3"
                             android:layout_width="wrap_content"
                             android:layout_centerHorizontal="true"
@@ -365,7 +367,8 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:text="Night"
+                            android:textAlignment="center"
+                            android:text="@string/night"
                             android:id="@+id/text4"
                             android:layout_width="wrap_content"
                             android:layout_centerHorizontal="true"

@@ -65,4 +65,8 @@
     <string name="not_available">Not available</string>
     <string name="no_slots">No slots available on this date</string>
     <string name="doctor_not_available">Doctor not available today.</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
 </resources>

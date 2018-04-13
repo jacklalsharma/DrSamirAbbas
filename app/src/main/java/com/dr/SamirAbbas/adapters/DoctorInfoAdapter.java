@@ -59,10 +59,11 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
         holder.book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!list.get(position).getIsAvailableToday()){
+                if(list.get(position).getIsAvailableToday()){
                     //Available today...
                     Intent intent = new Intent(mContext, AppointmentTimeSlotActivity.class);
                     intent.putExtra("doctor", list.get(position));
+                    intent.putExtra("speciality", specialization);
                     mContext.startActivity(intent);
                 }else{
                     //Not available today...

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.dr.SamirAbbas.R;
 import com.dr.SamirAbbas.models.AppointmentSlot;
 import com.dr.SamirAbbas.models.Doctors;
@@ -70,7 +71,12 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
         monthTextView = (TextView) findViewById(R.id.monthTextView);
 
         doctor = getIntent().getParcelableExtra("doctor");
+        String speciality = getIntent().getStringExtra("speciality");
         setCalendar();
+        ((TextView) findViewById(R.id.docNameTextView)).setText("Dr. " + doctor.getName());
+        ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
+        ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
+        Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
 
     }
 
@@ -81,6 +87,13 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
 
         dateArrayList = new ArrayList<>();
         Calendar cal = Calendar.getInstance();
+        String[] monthName = {"January", "February",
+                "March", "April", "May", "June", "July",
+                "August", "September", "October", "November",
+                "December"};
+
+        String strMonth = monthName[cal.get(Calendar.MONTH)];
+        ((TextView) findViewById(R.id.monthTextView)).setText(strMonth.toUpperCase());
 
         for(int i = 0  ; i < 14 ; ++i){
             int year = cal.get(Calendar.YEAR);
@@ -172,7 +185,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
         }
 
         Log.d("URL", url);
-        url = "https://hospoital.000webhostapp.com/booking-apis/apis/get_doctor_schedule_slots?doctor_id=7&date=2018-4-04";
+        //url = "https://hospoital.000webhostapp.com/booking-apis/apis/get_doctor_schedule_slots?doctor_id=7&date=2018-4-04";
         Ion.with(this)
                 .load("GET", url)
                 .setJsonObjectBody(new JsonObject())
@@ -192,6 +205,11 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         mList1.addAll(appointmentSlot.getData().getSlots().getMorning());
                                         adapter1.notifyDataSetChanged();
 
+                                    }else{
+                                        mList1.clear();
+                                        adapter1.notifyDataSetChanged();
+                                        String str = getResources().getString(R.string.morning) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                        ((TextView) findViewById(R.id.text1)) .setText(str);
                                     }
 
                                     if(appointmentSlot.getData().getSlots().getAfternoon() != null){
@@ -199,12 +217,22 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         mList2.addAll(appointmentSlot.getData().getSlots().getAfternoon());
                                         adapter2.notifyDataSetChanged();
 
+                                    }else{
+                                        mList2.clear();
+                                        adapter2.notifyDataSetChanged();
+                                        String str = getResources().getString(R.string.afternoon) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                        ((TextView) findViewById(R.id.text2)) .setText(str);
                                     }
 
                                     if(appointmentSlot.getData().getSlots().getEvening() != null){
                                         mList3.clear();
                                         mList3.addAll(appointmentSlot.getData().getSlots().getEvening());
                                         adapter3.notifyDataSetChanged();
+                                    }else{
+                                        mList3.clear();
+                                        adapter3.notifyDataSetChanged();
+                                        String str = getResources().getString(R.string.evening) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                        ((TextView) findViewById(R.id.text1)) .setText(str);
                                     }
 
 
@@ -216,6 +244,8 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                     }else{
                                         mList4.clear();
                                         adapter4.notifyDataSetChanged();
+                                        String str = getResources().getString(R.string.night) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                        ((TextView) findViewById(R.id.text1)) .setText(str);
                                     }
 
 
