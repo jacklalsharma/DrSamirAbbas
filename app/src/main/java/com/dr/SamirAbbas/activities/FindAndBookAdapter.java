@@ -12,19 +12,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.models.Specializations;
 
 import java.util.ArrayList;
 
 /**
  * Created by Anurag on 4/9/2018.
  */
-
 public class FindAndBookAdapter extends RecyclerView.Adapter<FindAndBookAdapter.BookViewHolder>{
 
-    private ArrayList<FindAndBook> list;
+    private ArrayList<Specializations.Specialization> list;
     private Context mContext;
 
-    public FindAndBookAdapter(ArrayList<FindAndBook> list, Context mContext) {
+    public FindAndBookAdapter(ArrayList<Specializations.Specialization> list, Context mContext) {
         this.list = list;
         this.mContext = mContext;
     }
@@ -38,15 +38,20 @@ public class FindAndBookAdapter extends RecyclerView.Adapter<FindAndBookAdapter.
     }
 
     @Override
-    public void onBindViewHolder(final BookViewHolder holder, int position) {
-        holder.docNameTextView.setText(list.get(position).getDocNameTextView());
-
-            String firstWord = String.valueOf(holder.docNameTextView.getText().toString().charAt(0));
-
-            holder.indexTextView.setText(firstWord);
-
+    public void onBindViewHolder(final BookViewHolder holder, final int position) {
+        holder.docNameTextView.setText(list.get(position).getName());
+        String firstWord = String.valueOf(holder.docNameTextView.getText().toString().charAt(0));
+        holder.indexTextView.setText(firstWord);
         holder.forwardImageView.setImageResource(R.drawable.arrow_next);
-
+        holder.main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, AvailableDoctorsListActivity.class);
+                intent.putExtra("position", position);
+                intent.putParcelableArrayListExtra("list", list);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -58,13 +63,14 @@ public class FindAndBookAdapter extends RecyclerView.Adapter<FindAndBookAdapter.
 
         private TextView indexTextView, docNameTextView;
         private ImageView forwardImageView;
+        View main;
 
         public BookViewHolder(View itemView) {
             super(itemView);
             indexTextView = itemView.findViewById(R.id.indexTextView);
             docNameTextView = itemView.findViewById(R.id.docNameTextView);
             forwardImageView = itemView.findViewById(R.id.forwardImageView);
-
+            main = itemView.findViewById(R.id.main);
         }
 
         @Override

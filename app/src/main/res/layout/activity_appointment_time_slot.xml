@@ -209,7 +209,7 @@
                     android:layout_below="@+id/fetchingDateLayout"
                     android:textColor="@color/blue"
                     android:text="@string/selected_date"
-                    android:layout_marginLeft="@dimen/_25sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
                     android:textSize="@dimen/_10sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

@@ -80,28 +80,33 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:text="@string/experience" />
 
-            <Button
-                android:id="@+id/bookAppointmentButton"
-                style="@style/Widget.AppCompat.Button.Colored"
+            <LinearLayout
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignRight="@+id/docNameTextView"
-                android:layout_marginRight="@dimen/_15sdp"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:backgroundTint="@color/blue"
-                android:text="Book" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/availabilityTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_below="@+id/bookAppointmentButton"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:text="@string/available"
-                android:textColor="@color/orange"
-                android:textSize="14sp" />
+                <Button
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/bookAppointmentButton"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/blue"
+                    android:text="Book" />
+
+                <TextView
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:id="@+id/availabilityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/available"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
 
 

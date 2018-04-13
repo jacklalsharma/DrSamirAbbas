@@ -7,13 +7,23 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.models.Specializations;
+import com.dr.SamirAbbas.utils.DialogBox;
+import com.dr.SamirAbbas.utils.Endpoints;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
 
 public class FindAndBookActivity extends BaseActivity {
 
-    private ArrayList<FindAndBook> mList;
+    private ArrayList<Specializations.Specialization> mList;
     private FindAndBookAdapter adapter;
     private RecyclerView recyclerView;
 
@@ -46,23 +56,40 @@ public class FindAndBookActivity extends BaseActivity {
 
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
-
-        prepareList();
-
-        adapter.notifyDataSetChanged();
-
+        getList();
     }
 
+    private void getList(){
+        DialogBox.ShowProgressDialog(this, "Getting speciality list", "Please wait while we are getting speciality list");
+
+        Ion.with(this)
+                .load("GET", Endpoints.SpecialityList)
+                .setJsonObjectBody(new JsonObject())
+                .asJsonObject()
+                .setCallback(new FutureCallback<JsonObject>() {
+                    @Override
+                    public void onCompleted(Exception e, JsonObject result) {
+                        DialogBox.DismissProgressDialog();
+                        if(result != null){
+                            try{
+                                JSONObject object = new JSONObject(result.toString());
+                                if(object.getBoolean("success")){
+                                    Specializations specializations = new Gson().fromJson(object.toString(), Specializations.class);
+                                    mList.addAll(specializations.getData().getSpecializations());
+                                    adapter.notifyDataSetChanged();
+                                }else{
+
+                                }
+                            }catch (JSONException e1){
+
+                            }
 
 
-    public void prepareList() {
-        FindAndBook fb = new FindAndBook("DENTIST");
-        mList.add(fb);
-
-        fb = new FindAndBook("WOMEN HEALTH");
-        mList.add(fb);
-
-        fb = new FindAndBook("SURGERY");
-        mList.add(fb);
+                        }else{
+                            //Failed...
+                        }
+                    }
+                });
     }
+
 }

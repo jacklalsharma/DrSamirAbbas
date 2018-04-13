@@ -9,11 +9,12 @@ import android.view.View;
 import com.dr.SamirAbbas.R;
 import com.dr.SamirAbbas.adapters.DoctorInfoAdapter;
 import com.dr.SamirAbbas.models.DoctorInfo;
+import com.dr.SamirAbbas.models.Doctors;
 
 import java.util.ArrayList;
 
 public class DoctorSearchListActivity extends BaseActivity {
-    ArrayList<DoctorInfo> mList;
+    ArrayList<Doctors.Doctor> mList;
     DoctorInfoAdapter doctorInfoAdapter;
     RecyclerView recyclerView;
 
@@ -41,7 +42,7 @@ public class DoctorSearchListActivity extends BaseActivity {
         recyclerView = findViewById(R.id.docListRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
-        doctorInfoAdapter = new DoctorInfoAdapter(mList, getActivity());
+        doctorInfoAdapter = new DoctorInfoAdapter(mList, getActivity(), "");
         recyclerView.setAdapter(doctorInfoAdapter);
 
         prepareDocList();
@@ -52,7 +53,7 @@ public class DoctorSearchListActivity extends BaseActivity {
         DoctorInfo  doctorInfo;
         for(int i = 0; i < 10; i++) {
             doctorInfo = new DoctorInfo("Ayushmaan Gupta", "MBBS", "Dentist", "12 Years of experience");
-            mList.add(doctorInfo);
+            //mList.add(doctorInfo);
         }
     }
 }

@@ -62,5 +62,7 @@
     <string name="services_lc">Services</string>
     <string name="emergency_trauma">Emergency \u0026 Trauma Care</string>
     <string name="Wards_and_rooms">Wards \u0026 Rooms</string>
-
+    <string name="not_available">Not available</string>
+    <string name="no_slots">No slots available on this date</string>
+    <string name="doctor_not_available">Doctor not available today.</string>
 </resources>

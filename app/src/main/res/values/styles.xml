@@ -125,6 +125,10 @@
 
     <style name="AppThemeFull.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Spinner" parent="Widget.AppCompat.Light.DropDownItem.Spinner">
+        <item name="android:textColor">@color/textGray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
 
 
 </resources>

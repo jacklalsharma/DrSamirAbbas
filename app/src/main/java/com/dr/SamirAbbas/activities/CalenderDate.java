@@ -49,4 +49,13 @@ public class CalenderDate {
     public void setSelected(boolean selected) {
         isSelected = selected;
     }
+
+    public String getCalendarDate(){
+        return "" + year + "-" + month + "-" + date;
+    }
+
+    @Override
+    public String toString() {
+        return "" + year + "/" + month + "/" + date;
+    }
 }

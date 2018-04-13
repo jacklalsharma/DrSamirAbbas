@@ -1,18 +1,16 @@
 package com.dr.SamirAbbas.activities;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.models.AppointmentSlot;
 
 import java.util.ArrayList;
 
@@ -22,15 +20,16 @@ import java.util.ArrayList;
 
 public class AppointmentTimeAdapter extends RecyclerView.Adapter<AppointmentTimeAdapter.TimeViewHolder>{
 
-    private ArrayList<AppointmentTime> list;
+    private ArrayList<AppointmentSlot.Morning> list;
     private Context mContext;
     private int initialPos;
+    private int type;
 
-
-    public AppointmentTimeAdapter(ArrayList<AppointmentTime> list, Context mContext) {
+    public AppointmentTimeAdapter(ArrayList<AppointmentSlot.Morning> list, Context mContext, int type) {
         this.list = list;
         this.mContext = mContext;
         initialPos = -1;
+        this.type = type;
     }
 
     @Override
@@ -44,10 +43,13 @@ public class AppointmentTimeAdapter extends RecyclerView.Adapter<AppointmentTime
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onBindViewHolder(final TimeViewHolder holder, final int position) {
-            holder.timeScheduleButton.setText(list.get(position).getTime() + "");
+            holder.timeScheduleButton.setText(list.get(position).getStartTime() + "");
             holder.timeScheduleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    ((AppointmentTimeSlotActivity) mContext).updateOthersSlotUponSelection();
+
                     if (list.get(position).isSelected()) {
                        initialPos = position;
                     }

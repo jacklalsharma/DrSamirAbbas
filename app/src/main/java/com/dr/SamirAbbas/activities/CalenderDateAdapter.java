@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -60,9 +61,13 @@ public class CalenderDateAdapter extends RecyclerView.Adapter<CalenderDateAdapte
                     }
                     initialPos = position;
                 }
+
+                ((AppointmentTimeSlotActivity) mContext).getTimingsSlot();
             }
         });
+
         if(list.get(position).isSelected()) {
+            Log.d("HERE", "HERE");
             holder.dateTextView.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.blue));
             holder.dateTextView.setTextColor(mContext.getResources().getColor(R.color.white));
         }
