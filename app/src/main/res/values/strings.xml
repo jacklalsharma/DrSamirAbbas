@@ -77,4 +77,8 @@
     <string name="enter_isn_number">Enter insurance number</string>
     <string name="booking_failed">Failed to book the appointment, try again</string>
     <string name="screenshot_captured">Screenshot captured</string>
+    <string name="something_wrong">Something is not right, try again</string>
+    <string name="no_doctors_found">No doctors found, try another category.</string>
+    <string name="search_doctor_by_name">Search doctor by name</string>
+    <string name="no_doctor_by_this_name">No doctor found by this name</string>
 </resources>

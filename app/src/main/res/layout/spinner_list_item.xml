@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_margin="@dimen/_3sdp"
+    android:id="@+id/spinnerText"
+    android:padding="@dimen/_6sdp"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:gravity="left"
-    android:textColor="@android:color/darker_gray"
-    />
+    android:layout_centerHorizontal="true"
+    android:textColor="@color/orange"
+    android:textSize="@dimen/_16sdp"
+    xmlns:android="http://schemas.android.com/apk/res/android"/>

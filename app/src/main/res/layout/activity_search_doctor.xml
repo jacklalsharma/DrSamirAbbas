@@ -63,11 +63,40 @@
         android:id="@+id/strip"/>
 
 
+    <RelativeLayout
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/btn_border_white"
+        android:id="@+id/holder"
+        android:layout_below="@+id/strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/search_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp" />
+
+
+        <android.support.v7.widget.AppCompatAutoCompleteTextView
+            android:layout_width="match_parent"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="@string/search_doctor_by_name"
+            android:layout_height="@dimen/_35sdp"
+            android:id="@+id/searchDoctor"/>
+
+    </RelativeLayout>
+
+
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/availDocRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/strip">
+        android:layout_below="@id/holder">
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
@@ -77,7 +106,6 @@
         android:layout_height="@dimen/_80sdp"
         android:layout_alignParentBottom="true"/>
 
-
     <TextView
         android:visibility="gone"
         android:id="@+id/no_docs"
@@ -86,6 +114,4 @@
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
-
 </RelativeLayout>

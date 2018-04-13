@@ -1,10 +1,12 @@
 package com.dr.SamirAbbas.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 import com.dr.SamirAbbas.R;
 import com.dr.SamirAbbas.models.Specializations;
@@ -57,6 +59,20 @@ public class FindAndBookActivity extends BaseActivity {
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         getList();
+
+        findViewById(R.id.searchDocText).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(mList == null){
+                    Toast.makeText(getActivity(), R.string.something_wrong, Toast.LENGTH_SHORT).show();
+                }else{
+                    Intent intent = new Intent(getActivity(), SearchDoctorActivity.class);
+                    intent.putExtra("position", 0);
+                    intent.putParcelableArrayListExtra("list", mList);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private void getList(){

@@ -3,10 +3,13 @@ package com.dr.SamirAbbas.activities;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.AppCompatSpinner;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -33,9 +36,13 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-public class AvailableDoctorsListActivity extends BaseActivity{
+/**
+ * Created by Anurag on 4/13/2018.
+ */
 
-    ArrayList<Doctors.Doctor> mList;
+public class SearchDoctorActivity extends BaseActivity{
+
+    ArrayList<Doctors.Doctor> mList, mainList;
     DoctorInfoAdapter doctorInfoAdapter;
     RecyclerView recyclerView;
     private boolean firstRun;
@@ -43,6 +50,7 @@ public class AvailableDoctorsListActivity extends BaseActivity{
     private ArrayList<Specializations.Specialization> specializationArrayList;
     private int selectedSpecialisation;
 
+    private AppCompatAutoCompleteTextView searchDoc;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -53,7 +61,7 @@ public class AvailableDoctorsListActivity extends BaseActivity{
         selectedSpecialisation = getIntent().getIntExtra("position", 0);
         specializationArrayList = getIntent().getParcelableArrayListExtra("list");
 
-        setContentView(R.layout.activity_available_doctors_list);
+        setContentView(R.layout.activity_search_doctor);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -102,7 +110,7 @@ public class AvailableDoctorsListActivity extends BaseActivity{
         mAdapter.setDropDownViewResource(R.layout.spinner_list_item);
         spinner.setAdapter(mAdapter);
 
-
+        mainList = new ArrayList<>();
         mList = new ArrayList<>();
         recyclerView = findViewById(R.id.availDocRecyclerView);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
@@ -111,6 +119,25 @@ public class AvailableDoctorsListActivity extends BaseActivity{
         recyclerView.setAdapter(doctorInfoAdapter);
 
         getDoctorsList();
+
+
+        searchDoc = findViewById(R.id.searchDoctor);
+        searchDoc.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                doctorInfoAdapter.search(charSequence + "");
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
     }
 
 
@@ -143,11 +170,18 @@ public class AvailableDoctorsListActivity extends BaseActivity{
                                     mList.addAll(doctors.getData().getDoctors());
                                     doctorInfoAdapter.notifyDataSetChanged();
 
+
+                                    Doctors doctors2 = new Gson().fromJson(object.toString(), Doctors.class);
+                                    mainList = new ArrayList<>();
+                                    mainList.addAll(doctors2.getData().getDoctors());
+
                                     if(mList.size() == 0){
                                         findViewById(R.id.no_docs).setVisibility(View.VISIBLE);
+                                        ((TextView) findViewById(R.id.no_docs)).setText(R.string.no_doctors_found);
                                     }else{
                                         findViewById(R.id.no_docs).setVisibility(View.GONE);
                                     }
+
                                 }
                             }catch (JSONException e1){
 
@@ -157,5 +191,19 @@ public class AvailableDoctorsListActivity extends BaseActivity{
                         }
                     }
                 });
+    }
+
+    public void updateSearchText(boolean show){
+        if(show){
+            findViewById(R.id.no_docs).setVisibility(View.VISIBLE);
+            ((TextView) findViewById(R.id.no_docs)).setText(R.string.no_doctor_by_this_name);
+        }else{
+            findViewById(R.id.no_docs).setVisibility(View.GONE);
+
+        }
+    }
+
+    public ArrayList<Doctors.Doctor> getList(){
+        return mainList;
     }
 }

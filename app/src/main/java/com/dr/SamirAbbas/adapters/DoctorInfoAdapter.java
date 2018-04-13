@@ -3,6 +3,7 @@ package com.dr.SamirAbbas.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.dr.SamirAbbas.R;
 import com.dr.SamirAbbas.activities.AppointmentTimeSlotActivity;
+import com.dr.SamirAbbas.activities.SearchDoctorActivity;
 import com.dr.SamirAbbas.models.DoctorInfo;
 import com.dr.SamirAbbas.models.Doctors;
 
@@ -27,11 +29,16 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
     private ArrayList<Doctors.Doctor> list;
     private Context mContext;
     private String specialization;
+    private ArrayList<Doctors.Doctor> original;
 
-    public DoctorInfoAdapter(ArrayList<Doctors.Doctor> list, Context mContext, String specialization) {
-        this.list = list;
+    public DoctorInfoAdapter(ArrayList<Doctors.Doctor> list2, Context mContext, String specialization) {
         this.specialization = specialization;
         this.mContext = mContext;
+        this.original = new ArrayList<>();
+        original.addAll(list2);
+
+        this.list = list2;
+
     }
 
     @Override
@@ -93,5 +100,45 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
             book = itemView.findViewById(R.id.bookAppointmentButton);
             availabilityTextView = itemView.findViewById(R.id.availabilityTextView);
         }
+    }
+
+    public void search(String name){
+        Log.d("QUERY", name);
+        if(name.equals("")){
+            Log.d("QUERY", "HERE2");
+
+            list.clear();
+            list.addAll(((SearchDoctorActivity) mContext).getList());
+            notifyDataSetChanged();
+            return;
+        }
+
+        ArrayList<Doctors.Doctor> tlist = new ArrayList<>();
+        Log.d("QUERY", "SIZE " + original.size());
+
+        for(int i = 0 ; i < ((SearchDoctorActivity) mContext).getList().size(); ++i){
+            if(((SearchDoctorActivity) mContext).getList().get(i).getName().toLowerCase().startsWith(name.toLowerCase())){
+                tlist.add(((SearchDoctorActivity) mContext).getList().get(i));
+                Log.d("QUERY", "HERE3");
+
+            }
+        }
+
+        if(tlist.size() > 0){
+            Log.d("QUERY", "HERE4");
+
+            list.clear();
+            list.addAll(tlist);
+            notifyDataSetChanged();
+            ((SearchDoctorActivity) mContext).updateSearchText(false);
+        }else{
+            Log.d("QUERY", "HERE5");
+
+            list.clear();
+            notifyDataSetChanged();
+            ((SearchDoctorActivity) mContext).updateSearchText(true);
+        }
+
+
     }
 }

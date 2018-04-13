@@ -55,23 +55,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/_5sdp"
-            android:layout_gravity="center_vertical"
-            android:background="@drawable/search_icon"
-            android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp" />
-
-        <EditText
-            android:background="@null"
-            android:id="@+id/searchDocText"
+        <RelativeLayout
+            android:id="@+id/search"
+            android:background="?android:attr/selectableItemBackground"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_35sdp"
-            android:gravity="center"
-            android:hint="@string/search_doc"
-            android:inputType="textAutoComplete"
-            android:singleLine="false" />
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/search_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp" />
+
+            <EditText
+                android:background="@null"
+                android:id="@+id/searchDocText"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center"
+                android:hint="@string/search_doc"
+                android:inputType="textAutoComplete"
+                android:singleLine="false" />
+        </RelativeLayout>
     </RelativeLayout>
 
     <TextView
