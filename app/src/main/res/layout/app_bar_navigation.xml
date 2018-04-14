@@ -59,219 +59,235 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_4sdp" />
 
-    <RelativeLayout
-        android:id="@+id/bannerLayout"
+    <android.support.v4.widget.NestedScrollView
         android:layout_below="@+id/strip"
-        android:background="@drawable/banner"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_140sdp"  >
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/bookAppointmentLayout"
-        android:layout_margin="@dimen/_15sdp"
-        android:layout_below="@+id/bannerLayout"
-        android:background="@drawable/btn_outer"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_120sdp">
-
+        android:layout_height="match_parent">
         <LinearLayout
-            android:layout_margin="3dp"
-            android:background="@color/white"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:clickable="true"
-                android:orientation="vertical"
-                android:id="@+id/bookAppointmentButton"
-                android:background="?android:attr/selectableItemBackground"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/bannerLayout"
+                android:layout_below="@+id/strip"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="@dimen/_140sdp"  >
 
-                <ImageView
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_aapointment"
-                    android:layout_width="@dimen/_40sdp"
-                    android:layout_height="@dimen/_60sdp" />
+                <com.dr.SamirAbbas.views.ViewPagerCustomDuration
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp">
 
-                <TextView
-                    android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_gravity="center"
-                    android:text="@string/book_appointment"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                </com.dr.SamirAbbas.views.ViewPagerCustomDuration>
 
+            </RelativeLayout>
 
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </RelativeLayout>
-
-        <LinearLayout
-            android:layout_marginLeft="@dimen/_15sdp"
-            android:layout_marginRight="@dimen/_15sdp"
-            android:layout_below="@+id/bookAppointmentLayout"
-            android:id="@+id/btnLayout1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_90sdp"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:clickable="true"
-                android:id="@+id/docSearchLayout"
-                android:layout_margin="@dimen/_2sdp"
-                android:layout_weight="1"
-                android:background="@color/white"
+            <RelativeLayout
+                android:id="@+id/bookAppointmentLayout"
+                android:layout_margin="@dimen/_15sdp"
+                android:layout_below="@+id/bannerLayout"
+                android:background="@drawable/btn_outer"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="@dimen/_120sdp">
 
                 <LinearLayout
-
-                    android:orientation="vertical"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_margin="3dp"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_doctors"
-                        android:layout_width="@dimen/_50sdp"
-                        android:layout_height="@dimen/_50sdp"/>
+                    <LinearLayout
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:id="@+id/bookAppointmentButton"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                    <TextView
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_gravity="center"
-                        android:text="@string/doctors"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_5sdp"/>
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_aapointment"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_60sdp" />
+
+                        <TextView
+                            android:textSize="@dimen/_14sdp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_gravity="center"
+                            android:text="@string/book_appointment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
                 </LinearLayout>
-            </LinearLayout>
+
+            </RelativeLayout>
 
             <LinearLayout
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/_2sdp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:layout_width="match_parent">
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_below="@+id/bookAppointmentLayout"
+                android:id="@+id/btnLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_90sdp"
+                android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@+id/servicesLayout"
                     android:clickable="true"
-                    android:orientation="vertical"
+                    android:id="@+id/docSearchLayout"
+                    android:layout_margin="@dimen/_2sdp"
                     android:layout_weight="1"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:background="@color/white"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_services"
-                        android:layout_width="@dimen/_50sdp"
-                        android:layout_height="@dimen/_50sdp"/>
+                    <LinearLayout
 
-                    <TextView
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="@dimen/_8sdp"
-                        android:layout_gravity="center"
-                        android:text="@string/services"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/_5sdp"/>
+                        android:orientation="vertical"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_doctors"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"/>
+
+                        <TextView
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_gravity="center"
+                            android:text="@string/doctors"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+                    </LinearLayout>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_width="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/servicesLayout"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_services"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"/>
+
+                        <TextView
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_gravity="center"
+                            android:text="@string/services"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
-
-        </LinearLayout>
-
-    <LinearLayout
-        android:layout_marginLeft="@dimen/_15sdp"
-        android:layout_marginRight="@dimen/_15sdp"
-        android:layout_below="@+id/btnLayout1"
-        android:id="@+id/btnLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_90sdp"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/_2sdp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:layout_width="match_parent">
-           <LinearLayout
-               android:id="@+id/galleryLayout"
-               android:clickable="true"
-               android:orientation="vertical"
-               android:layout_weight="1"
-               android:background="?android:attr/selectableItemBackground"
-               android:layout_width="match_parent"
-               android:layout_height="match_parent">
-
-               <ImageView
-                   android:layout_marginTop="@dimen/_10sdp"
-                   android:layout_gravity="center"
-                   android:background="@drawable/ic_gallery"
-                   android:layout_width="@dimen/_50sdp"
-                   android:layout_height="@dimen/_50sdp"/>
-
-               <TextView
-                   android:textSize="@dimen/_10sdp"
-                   android:textStyle="bold"
-                   android:layout_marginTop="@dimen/_8sdp"
-                   android:layout_gravity="center"
-                   android:text="@string/gallery"
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginBottom="@dimen/_5sdp"/>
-           </LinearLayout>
-       </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/_2sdp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:layout_width="match_parent">
 
             <LinearLayout
-                android:id="@+id/facilitiesLayout"
-                android:clickable="true"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_below="@+id/btnLayout1"
+                android:id="@+id/btnLayout2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="@dimen/_90sdp"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/nav_contact_us"
-                    android:layout_width="@dimen/_50sdp"
-                    android:layout_height="@dimen/_50sdp"/>
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_width="match_parent">
+                    <LinearLayout
+                        android:id="@+id/galleryLayout"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:textSize="@dimen/_10sdp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_gravity="center"
-                    android:text="@string/contact_us"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"/>
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_gallery"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"/>
+
+                        <TextView
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_gravity="center"
+                            android:text="@string/gallery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:layout_width="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/facilitiesLayout"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/nav_contact_us"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="@dimen/_50sdp"/>
+
+                        <TextView
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_gravity="center"
+                            android:text="@string/contact_us"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
             </LinearLayout>
         </LinearLayout>
-
-    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
 </RelativeLayout>

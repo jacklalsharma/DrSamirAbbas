@@ -2,8 +2,10 @@ package com.dr.SamirAbbas.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
@@ -13,8 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.adapters.BannerAdapter;
 
 public class NavigationActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener{
+
+    private ViewPager viewPager;
 
 
     @Override
@@ -97,7 +102,17 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
             }
         });
 
+        viewPager = findViewById(R.id.banner);
+        viewPager.setAdapter(new BannerAdapter(getSupportFragmentManager()));
 
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                viewPager.setCurrentItem((viewPager.getCurrentItem() + 1) % 4 , true);
+                handler.postDelayed(this, 2000);
+            }
+        }, 2000);
 
     }
 

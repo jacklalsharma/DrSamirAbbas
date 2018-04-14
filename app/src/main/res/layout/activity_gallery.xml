@@ -73,13 +73,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_70sdp" />
 
-                <ImageSwitcher
-                    android:id="@+id/imageSwitcher"
+                <com.dr.SamirAbbas.views.ViewPagerCustomDuration
+                    android:id="@+id/banner"
                     android:layout_below="@+id/header"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_150sdp">
 
-                </ImageSwitcher>
+                </com.dr.SamirAbbas.views.ViewPagerCustomDuration>
+
 
                 <ImageView
                     android:layout_marginTop="@dimen/_115sdp"
