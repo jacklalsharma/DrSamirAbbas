@@ -131,6 +131,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:visibility="gone"
         android:clickable="true"
         android:background="?android:attr/selectableItemBackground"
         android:id="@+id/facilitiesLayout"
@@ -173,7 +174,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/facilitiesLayout"
+        android:layout_below="@+id/servicesLayout"
         android:orientation="horizontal">
 
         <ImageView

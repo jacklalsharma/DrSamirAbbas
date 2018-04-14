@@ -7,6 +7,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -41,6 +42,63 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
         findViewById(R.id.servicesLayout).setOnClickListener(this);
         findViewById(R.id.galleryLayout).setOnClickListener(this);
         findViewById(R.id.facilitiesLayout).setOnClickListener(this);
+
+        navigationView.findViewById(R.id.galleryLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getActivity(), GalleryActivity.class));
+            }
+        });
+
+        navigationView.findViewById(R.id.servicesLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getActivity(), ServicesActivity.class));
+            }
+        });
+
+        navigationView.findViewById(R.id.contactLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+                startActivity(new Intent(getActivity(), ContactUsActivity.class));
+            }
+        });
+
+        navigationView.findViewById(R.id.shareLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+            }
+        });
+
+        navigationView.findViewById(R.id.homeLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+            }
+        });
+
+        navigationView.findViewById(R.id.aboutUSLayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+                drawer.closeDrawer(GravityCompat.START);
+
+            }
+        });
+
+
+
     }
 
     @Override
@@ -86,10 +144,13 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.docSearchLayout) {
-            startActivity(new Intent(getActivity(), DoctorSearchListActivity.class));
+            Intent intent = new Intent(getActivity(), SearchDoctorActivity.class);
+            intent.putParcelableArrayListExtra("list", null);
+            intent.putExtra("position", 0);
+            startActivity(intent);
 
         } else if(view.getId() == R.id.facilitiesLayout) {
-            startActivity(new Intent(getActivity(), FacilitiesActivity.class));
+            startActivity(new Intent(getActivity(), ContactUsActivity.class));
 
         } else if(view.getId() == R.id.galleryLayout) {
             startActivity(new Intent(getActivity(), GalleryActivity.class));

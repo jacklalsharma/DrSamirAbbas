@@ -75,50 +75,22 @@ public class SearchDoctorActivity extends BaseActivity{
             }
         });
 
-        AppCompatSpinner spinner = (AppCompatSpinner) findViewById(R.id.docOccupationSpinner);
+        if(specializationArrayList != null){
+            setSpinner();
+            mainList = new ArrayList<>();
+            mList = new ArrayList<>();
+            recyclerView = findViewById(R.id.availDocRecyclerView);
+            LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+            recyclerView.setLayoutManager(linearLayoutManager);
+            doctorInfoAdapter = new DoctorInfoAdapter(mList, getActivity(), specializationArrayList.get(selectedSpecialisation).getName());
+            recyclerView.setAdapter(doctorInfoAdapter);
 
-        List<String> list = new ArrayList<>();
-
-        for(int i = 0 ; i < specializationArrayList.size() ; ++i){
-            list.add(specializationArrayList.get(i).getName());
+            getDoctorsList();
+        }else{
+            getSpecialityList();
         }
 
-        ((TextView) findViewById(R.id.docTextView)).setText(specializationArrayList.get(selectedSpecialisation).getName());
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                if(firstRun == false){
-                    firstRun = true;
-                    return;
-                }
-                selectedSpecialisation = i;
-                ((TextView) findViewById(R.id.docTextView)).setText(specializationArrayList.get(selectedSpecialisation).getName());
-                mList.clear();
-                doctorInfoAdapter.notifyDataSetChanged();
-                getDoctorsList();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-
-        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, R.layout.spinner_list_item, list);
-        mAdapter.setDropDownViewResource(R.layout.spinner_list_item);
-        spinner.setAdapter(mAdapter);
-
-        mainList = new ArrayList<>();
-        mList = new ArrayList<>();
-        recyclerView = findViewById(R.id.availDocRecyclerView);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        recyclerView.setLayoutManager(linearLayoutManager);
-        doctorInfoAdapter = new DoctorInfoAdapter(mList, getActivity(), specializationArrayList.get(selectedSpecialisation).getName());
-        recyclerView.setAdapter(doctorInfoAdapter);
-
-        getDoctorsList();
 
 
         searchDoc = findViewById(R.id.searchDoctor);
@@ -130,6 +102,9 @@ public class SearchDoctorActivity extends BaseActivity{
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if(doctorInfoAdapter == null){
+                    return;
+                }
                 doctorInfoAdapter.search(charSequence + "");
             }
 
@@ -205,5 +180,91 @@ public class SearchDoctorActivity extends BaseActivity{
 
     public ArrayList<Doctors.Doctor> getList(){
         return mainList;
+    }
+
+
+    private void getSpecialityList(){
+        DialogBox.ShowProgressDialog(this, "Getting speciality list", "Please wait while we are getting speciality list");
+
+        Ion.with(this)
+                .load("GET", Endpoints.SpecialityList)
+                .setJsonObjectBody(new JsonObject())
+                .asJsonObject()
+                .setCallback(new FutureCallback<JsonObject>() {
+                    @Override
+                    public void onCompleted(Exception e, JsonObject result) {
+                        DialogBox.DismissProgressDialog();
+                        if(result != null){
+                            try{
+                                JSONObject object = new JSONObject(result.toString());
+                                if(object.getBoolean("success")){
+                                    Specializations specializations = new Gson().fromJson(object.toString(), Specializations.class);
+                                    specializationArrayList = new ArrayList<>();
+                                    specializationArrayList.addAll(specializations.getData().getSpecializations());
+                                    setSpinner();
+
+                                    mainList = new ArrayList<>();
+                                    mList = new ArrayList<>();
+                                    recyclerView = findViewById(R.id.availDocRecyclerView);
+                                    LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+                                    recyclerView.setLayoutManager(linearLayoutManager);
+                                    doctorInfoAdapter = new DoctorInfoAdapter(mList, getActivity(), specializationArrayList.get(selectedSpecialisation).getName());
+                                    recyclerView.setAdapter(doctorInfoAdapter);
+
+                                    getDoctorsList();
+
+
+                                }else{
+
+                                }
+                            }catch (JSONException e1){
+
+                            }
+
+
+                        }else{
+                            //Failed...
+                        }
+                    }
+                });
+    }
+
+    private void setSpinner(){
+
+        AppCompatSpinner spinner = (AppCompatSpinner) findViewById(R.id.docOccupationSpinner);
+
+        List<String> list = new ArrayList<>();
+
+        for(int i = 0 ; i < specializationArrayList.size() ; ++i){
+            list.add(specializationArrayList.get(i).getName());
+        }
+
+        ((TextView) findViewById(R.id.docTextView)).setText(specializationArrayList.get(selectedSpecialisation).getName());
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if(firstRun == false){
+                    firstRun = true;
+                    return;
+                }
+                selectedSpecialisation = i;
+                ((TextView) findViewById(R.id.docTextView)).setText(specializationArrayList.get(selectedSpecialisation).getName());
+                mList.clear();
+                doctorInfoAdapter.setSpecialization(specializationArrayList.get(selectedSpecialisation).getName());
+                doctorInfoAdapter.notifyDataSetChanged();
+                getDoctorsList();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
+
+        ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, R.layout.spinner_list_item, list);
+        mAdapter.setDropDownViewResource(R.layout.spinner_list_item);
+        spinner.setAdapter(mAdapter);
     }
 }

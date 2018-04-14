@@ -17,8 +17,8 @@
 
         <Button
             android:textColor="@color/white"
-            android:paddingBottom="@dimen/_7sdp"
-            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
             android:background="?android:attr/selectableItemBackground"
             android:text="@string/language"
             android:layout_weight="1"
@@ -29,8 +29,8 @@
 
         <Button
             android:textColor="@color/white"
-            android:paddingBottom="@dimen/_7sdp"
-            android:paddingTop="@dimen/_7sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
             android:background="?android:attr/selectableItemBackground"
             android:text="@string/language"
             android:layout_weight="1"

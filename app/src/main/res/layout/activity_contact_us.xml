@@ -43,12 +43,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <ImageView
-        android:layout_alignParentEnd="true"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_alignParentBottom="true"
-        android:src="@drawable/logo"
-        android:layout_height="@dimen/_77sdp" />
 
     <ImageView
         android:id="@+id/strip"
@@ -57,121 +51,144 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_4sdp" />
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_below="@+id/strip"
-        android:background="@drawable/contact_us_samir_abbas"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_160sdp" />
 
     <android.support.v4.widget.NestedScrollView
-        android:layout_below="@+id/image"
-        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_below="@+id/strip"
         android:layout_width="match_parent"
-        android:paddingBottom="@dimen/_10sdp"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:background="@color/white"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:padding="@dimen/_10sdp"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:gravity="center"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/main"
+                android:background="@color/white"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/orange"
-                android:text="@string/adress"/>
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="@dimen/_30sdp"
-                android:layout_marginRight="@dimen/_30sdp"
-                android:layout_height="@dimen/_2sdp"
-                android:background="@drawable/nav_strip"
-               />
 
-            <TextView
-                android:id="@+id/addressTextView"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue"
-                android:textSize="@dimen/_14sdp"
-                android:textStyle="bold"
-                android:text="AL KURNAYUSH RD,ASH SHATI,6906 AL KURNAYUSH RD ASH SHATI DISTRICT JEDDAH 234113597,JEDDAH 234113597,SAUDI ARABIA "/>
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_below="@+id/strip"
+                    android:background="@drawable/contact_us_samir_abbas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_220sdp" />
 
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/orange"
-                android:text="@string/phone_no"/>
+                <TextView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:text="@string/adress"/>
 
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="@dimen/_30sdp"
-                android:layout_marginRight="@dimen/_30sdp"
-                android:layout_height="@dimen/_2sdp"
-                android:background="@drawable/nav_strip"
-                />
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/nav_strip"
+                    />
 
-            <TextView
-                android:id="@+id/numberTextView"
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue"
-                android:textSize="@dimen/_13sdp"
-                android:textStyle="bold"
-                android:text=" + 966126187777"/>
+                <TextView
+                    android:id="@+id/addressTextView"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    android:text="AL KURNAYUSH RD,ASH SHATI,6906 AL KURNAYUSH RD ASH SHATI DISTRICT JEDDAH 234113597,JEDDAH 234113597,SAUDI ARABIA "/>
 
-            <TextView
-                android:layout_marginTop="@dimen/_10sdp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/orange"
-                android:text="@string/email"/>
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:text="@string/phone_no"/>
 
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_3sdp"
-                android:layout_width="match_parent"
-                android:layout_marginLeft="@dimen/_30sdp"
-                android:layout_marginRight="@dimen/_30sdp"
-                android:layout_height="@dimen/_2sdp"
-                android:background="@drawable/nav_strip"
-                />
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/nav_strip"
+                    />
 
-            <TextView
-                android:gravity="center"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:paddingLeft="@dimen/_10sdp"
-                android:paddingRight="@dimen/_10sdp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/blue"
-                android:textSize="@dimen/_13sdp"
-                android:textStyle="bold"
-                android:text="BADAR.ABBAS@DSHAH.SA"/>
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/numberTextView"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text=" + 966126187777"/>
+
+                <TextView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:text="@string/email"/>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/nav_strip"
+                    />
+
+                <TextView
+                    android:layout_marginBottom="@dimen/_25sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:text="BADAR.ABBAS@DSHAH.SA"/>
+
+                <ImageView
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/map"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_below="@id/main"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_70sdp"
+                android:src="@drawable/logo"
+                android:layout_height="@dimen/_77sdp" />
+
+        </RelativeLayout>
 
 
 
     </android.support.v4.widget.NestedScrollView>
+
+
+
 
 </RelativeLayout>

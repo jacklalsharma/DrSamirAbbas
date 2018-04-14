@@ -155,6 +155,12 @@ public class Specializations implements Parcelable {
         @SerializedName("date")
         @Expose
         private String date;
+
+
+        @SerializedName("name_ar")
+        @Expose
+        private String name_ar;
+
         public final static Parcelable.Creator<Specialization> CREATOR = new Creator<Specialization>() {
 
 
@@ -176,9 +182,18 @@ public class Specializations implements Parcelable {
             this.id = ((Integer) in.readValue((Integer.class.getClassLoader())));
             this.name = ((String) in.readValue((String.class.getClassLoader())));
             this.date = ((String) in.readValue((String.class.getClassLoader())));
+            this.name_ar = ((String) in.readValue((String.class.getClassLoader())));
         }
 
         public Specialization() {
+        }
+
+        public String getName_ar() {
+            return name_ar;
+        }
+
+        public void setName_ar(String name_ar) {
+            this.name_ar = name_ar;
         }
 
         public Integer getId() {
@@ -209,6 +224,7 @@ public class Specializations implements Parcelable {
             dest.writeValue(id);
             dest.writeValue(name);
             dest.writeValue(date);
+            dest.writeValue(name_ar);
         }
 
         public int describeContents() {

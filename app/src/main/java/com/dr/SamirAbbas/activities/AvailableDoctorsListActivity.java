@@ -87,6 +87,7 @@ public class AvailableDoctorsListActivity extends BaseActivity{
                 selectedSpecialisation = i;
                 ((TextView) findViewById(R.id.docTextView)).setText(specializationArrayList.get(selectedSpecialisation).getName());
                 mList.clear();
+                doctorInfoAdapter.setSpecialization(specializationArrayList.get(selectedSpecialisation).getName());
                 doctorInfoAdapter.notifyDataSetChanged();
                 getDoctorsList();
             }

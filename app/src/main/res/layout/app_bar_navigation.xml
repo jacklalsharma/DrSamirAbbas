@@ -209,40 +209,6 @@
             android:layout_weight="1"
             android:background="@color/white"
             android:layout_width="match_parent">
-
-            <LinearLayout
-                android:id="@+id/facilitiesLayout"
-                android:clickable="true"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_facilities"
-                    android:layout_width="@dimen/_50sdp"
-                    android:layout_height="@dimen/_50sdp"/>
-
-                <TextView
-                    android:textSize="@dimen/_10sdp"
-                    android:textStyle="bold"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_gravity="center"
-                    android:text="@string/facilities"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_5sdp"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/_2sdp"
-            android:layout_weight="1"
-            android:background="@color/white"
-            android:layout_width="match_parent">
            <LinearLayout
                android:id="@+id/galleryLayout"
                android:clickable="true"
@@ -270,6 +236,42 @@
                    android:layout_marginBottom="@dimen/_5sdp"/>
            </LinearLayout>
        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:layout_width="match_parent">
+
+            <LinearLayout
+                android:id="@+id/facilitiesLayout"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/nav_contact_us"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"/>
+
+                <TextView
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_gravity="center"
+                    android:text="@string/contact_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"/>
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 </RelativeLayout>

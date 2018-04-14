@@ -55,384 +55,405 @@
         android:layout_below="@+id/strip"
         android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <RelativeLayout
+            android:descendantFocusability="blocksDescendants"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
             <ImageView
                 android:id="@+id/banner"
-                android:layout_below="@+id/strip"
                 android:scaleType="fitXY"
                 android:src="@drawable/sevices_samir_abbas_hospital"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_200sdp" />
-            <LinearLayout
 
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_below="@+id/banner"
+                android:id="@+id/servicesList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/main"
                 android:orientation="vertical"
-                android:clickable="true"
-                android:id="@+id/layout"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="?android:attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <LinearLayout
 
-                <RelativeLayout
-                    android:layout_margin="1px"
-                    android:background="@drawable/btn_border_white"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:id="@+id/layout"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:id="@+id/innerlayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+
+                    <RelativeLayout
                         android:layout_margin="1px"
-                        android:orientation="horizontal"
-                        android:layout_toLeftOf="@+id/forwardImageView"
-                        >
+                        android:background="@drawable/btn_border_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-
-                            android:background="@drawable/circle_text_blue"
-                            android:text="C"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_margin="@dimen/_6sdp"
-                            android:textSize="@dimen/_12sdp"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp" />
-
-                        <TextView
-
+                        <LinearLayout
+                            android:id="@+id/innerlayout"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Critical Care Units"
-                            android:textSize="@dimen/_13sdp"
-                            android:textColor="@color/black"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:gravity="center_vertical"/>
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1px"
+                            android:orientation="horizontal"
+                            android:layout_toLeftOf="@+id/forwardImageView"
+                            >
 
-                    </LinearLayout>
+                            <TextView
+
+                                android:background="@drawable/circle_text_blue"
+                                android:text="C"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Critical Care Units"
+                                android:textSize="@dimen/_13sdp"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/viewMoreImageView"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/_10sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/drop_down"
+                            android:layout_height="@dimen/_6sdp"
+                            />
+                    </RelativeLayout>
+
 
                     <ImageView
-                        android:id="@+id/viewMoreImageView"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="@dimen/_10sdp"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/drop_down"
-                        android:layout_height="@dimen/_6sdp"
+                        android:id="@+id/image"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_height="@dimen/_160sdp"
+                        android:src="@drawable/sercices_samir_assab"
+                        android:visibility="gone"
                         />
-                </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
 
 
-                <ImageView
-                    android:id="@+id/image"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/sercices_samir_assab"
-                    android:visibility="gone"
-                    />
-
-                <TextView
-                    android:id="@+id/text"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
+                </LinearLayout>
 
 
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:id="@+id/layout2"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <RelativeLayout
-                    android:layout_margin="1px"
-                    android:background="@drawable/btn_border_white"
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:id="@+id/layout2"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:id="@+id/innerlayout2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+
+                    <RelativeLayout
                         android:layout_margin="1px"
-                        android:orientation="horizontal"
-                        android:layout_toLeftOf="@+id/forwardImageView"
-                        >
+                        android:background="@drawable/btn_border_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-
-                            android:background="@drawable/circle_text_blue"
-                            android:text="P"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_margin="@dimen/_6sdp"
-                            android:textSize="@dimen/_12sdp"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp" />
-
-                        <TextView
-
+                        <LinearLayout
+                            android:id="@+id/innerlayout2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Patient Support Services"
-                            android:textSize="@dimen/_13sdp"
-                            android:textColor="@color/black"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:gravity="center_vertical"/>
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1px"
+                            android:orientation="horizontal"
+                            android:layout_toLeftOf="@+id/forwardImageView"
+                            >
 
-                    </LinearLayout>
+                            <TextView
+
+                                android:background="@drawable/circle_text_blue"
+                                android:text="P"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Patient Support Services"
+                                android:textSize="@dimen/_13sdp"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/viewMoreImageView2"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/_10sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/drop_down"
+                            android:layout_height="@dimen/_6sdp"
+                            />
+                    </RelativeLayout>
+
 
                     <ImageView
-                        android:id="@+id/viewMoreImageView2"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="@dimen/_10sdp"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/drop_down"
-                        android:layout_height="@dimen/_6sdp"
+                        android:id="@+id/image2"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_height="@dimen/_160sdp"
+                        android:src="@drawable/sercices_samir_assab"
+                        android:visibility="gone"
                         />
-                </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text2"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
 
 
-                <ImageView
-                    android:id="@+id/image2"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/sercices_samir_assab"
-                    android:visibility="gone"
-                    />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text2"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:id="@+id/layout3"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <RelativeLayout
-                    android:layout_margin="1px"
-                    android:background="@drawable/btn_border_white"
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:id="@+id/layout3"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:id="@+id/innerlayout3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+
+                    <RelativeLayout
                         android:layout_margin="1px"
-                        android:orientation="horizontal"
-                        android:layout_toLeftOf="@+id/forwardImageView"
-                        >
+                        android:background="@drawable/btn_border_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-
-                            android:background="@drawable/circle_text_blue"
-                            android:text="e"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_margin="@dimen/_6sdp"
-                            android:textSize="@dimen/_12sdp"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp" />
-
-                        <TextView
-
+                        <LinearLayout
+                            android:id="@+id/innerlayout3"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="e-CLINIC-Telemedicine Services"
-                            android:textSize="@dimen/_13sdp"
-                            android:textColor="@color/black"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:gravity="center_vertical"/>
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1px"
+                            android:orientation="horizontal"
+                            android:layout_toLeftOf="@+id/forwardImageView"
+                            >
 
-                    </LinearLayout>
+                            <TextView
+
+                                android:background="@drawable/circle_text_blue"
+                                android:text="e"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="e-CLINIC-Telemedicine Services"
+                                android:textSize="@dimen/_13sdp"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/viewMoreImageView3"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/_10sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/drop_down"
+                            android:layout_height="@dimen/_6sdp"
+                            />
+                    </RelativeLayout>
+
 
                     <ImageView
-                        android:id="@+id/viewMoreImageView3"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="@dimen/_10sdp"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/drop_down"
-                        android:layout_height="@dimen/_6sdp"
+                        android:id="@+id/image3"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_height="@dimen/_160sdp"
+                        android:src="@drawable/sercices_samir_assab"
+                        android:visibility="gone"
                         />
-                </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text3"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
 
 
-                <ImageView
-                    android:id="@+id/image3"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/sercices_samir_assab"
-                    android:visibility="gone"
-                    />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/text3"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:orientation="vertical"
-                android:clickable="true"
-                android:id="@+id/layout4"
-                android:layout_marginTop="@dimen/_10sdp"
-                android:background="?android:attr/selectableItemBackground"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <RelativeLayout
-                    android:layout_margin="1px"
-                    android:background="@drawable/btn_border_white"
+                <LinearLayout
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:id="@+id/layout4"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="?android:attr/selectableItemBackground"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:id="@+id/innerlayout4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+
+                    <RelativeLayout
                         android:layout_margin="1px"
-                        android:orientation="horizontal"
-                        android:layout_toLeftOf="@+id/forwardImageView"
-                        >
+                        android:background="@drawable/btn_border_white"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                        <TextView
-
-                            android:background="@drawable/circle_text_blue"
-                            android:text="L"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"
-                            android:layout_margin="@dimen/_6sdp"
-                            android:textSize="@dimen/_12sdp"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp" />
-
-                        <TextView
-
+                        <LinearLayout
+                            android:id="@+id/innerlayout4"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="@string/lab_test"
-                            android:textSize="@dimen/_13sdp"
-                            android:textColor="@color/black"
-                            android:layout_marginLeft="@dimen/_5sdp"
-                            android:gravity="center_vertical"/>
+                            android:layout_height="wrap_content"
+                            android:layout_margin="1px"
+                            android:orientation="horizontal"
+                            android:layout_toLeftOf="@+id/forwardImageView"
+                            >
 
-                    </LinearLayout>
+                            <TextView
+
+                                android:background="@drawable/circle_text_blue"
+                                android:text="L"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:layout_margin="@dimen/_6sdp"
+                                android:textSize="@dimen/_12sdp"
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_20sdp" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/lab_test"
+                                android:textSize="@dimen/_13sdp"
+                                android:textColor="@color/black"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/viewMoreImageView4"
+                            android:layout_alignParentEnd="true"
+                            android:layout_width="@dimen/_10sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/drop_down"
+                            android:layout_height="@dimen/_6sdp"
+                            />
+                    </RelativeLayout>
+
 
                     <ImageView
-                        android:id="@+id/viewMoreImageView4"
-                        android:layout_alignParentEnd="true"
-                        android:layout_width="@dimen/_10sdp"
-                        android:padding="@dimen/_5sdp"
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/drop_down"
-                        android:layout_height="@dimen/_6sdp"
+                        android:id="@+id/image4"
+                        android:layout_width="match_parent"
+                        android:scaleType="fitXY"
+                        android:layout_height="@dimen/_160sdp"
+                        android:src="@drawable/sercices_samir_assab"
+                        android:visibility="gone"
                         />
-                </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/text4"
+                        android:layout_width="match_parent"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingLeft="@dimen/_20sdp"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
 
 
-                <ImageView
-                    android:id="@+id/image4"
-                    android:layout_width="match_parent"
-                    android:scaleType="fitXY"
-                    android:layout_height="@dimen/_160sdp"
-                    android:src="@drawable/sercices_samir_assab"
-                    android:visibility="gone"
-                    />
-
-                <TextView
-                    android:id="@+id/text4"
-                    android:layout_width="match_parent"
-                    android:paddingBottom="@dimen/_10sdp"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingLeft="@dimen/_20sdp"
-                    android:paddingRight="@dimen/_20sdp"
-                    android:layout_height="wrap_content"
-                    android:textStyle="bold"
-                    android:visibility="gone"
-                    android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
-
+                </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+            <ImageView
+                android:layout_below="@+id/servicesList"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/logo"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp" />
+
+
+        </RelativeLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-    <ImageView
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/logo"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_70sdp" />
+
 
 </RelativeLayout>

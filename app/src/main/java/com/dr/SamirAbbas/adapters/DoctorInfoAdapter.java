@@ -31,6 +31,14 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
     private String specialization;
     private ArrayList<Doctors.Doctor> original;
 
+    public String getSpecialization() {
+        return specialization;
+    }
+
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
+    }
+
     public DoctorInfoAdapter(ArrayList<Doctors.Doctor> list2, Context mContext, String specialization) {
         this.specialization = specialization;
         this.mContext = mContext;
@@ -60,22 +68,18 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
         if(list.get(position).getIsAvailableToday()){
             holder.availabilityTextView.setText(R.string.available);
         }else{
-            holder.availabilityTextView.setText(R.string.not_available);
+            holder.availabilityTextView.setText("");
         }
 
         holder.book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(list.get(position).getIsAvailableToday()){
-                    //Available today...
-                    Intent intent = new Intent(mContext, AppointmentTimeSlotActivity.class);
-                    intent.putExtra("doctor", list.get(position));
-                    intent.putExtra("speciality", specialization);
-                    mContext.startActivity(intent);
-                }else{
-                    //Not available today...
-                    Toast.makeText(mContext, R.string.doctor_not_available, Toast.LENGTH_SHORT).show();
-                }
+
+                Intent intent = new Intent(mContext, AppointmentTimeSlotActivity.class);
+                intent.putExtra("doctor", list.get(position));
+                intent.putExtra("speciality", specialization);
+                mContext.startActivity(intent);
+
             }
         });
     }

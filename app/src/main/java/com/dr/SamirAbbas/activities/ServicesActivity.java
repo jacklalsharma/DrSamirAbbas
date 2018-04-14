@@ -1,11 +1,14 @@
 package com.dr.SamirAbbas.activities;
 
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.adapters.ServicesAdapter;
 
 public class ServicesActivity extends BaseActivity implements View.OnClickListener {
 
@@ -43,6 +46,11 @@ public class ServicesActivity extends BaseActivity implements View.OnClickListen
         findViewById(R.id.layout2).setOnClickListener(this);
         findViewById(R.id.layout3).setOnClickListener(this);
         findViewById(R.id.layout4).setOnClickListener(this);
+
+        RecyclerView recyclerView = findViewById(R.id.servicesList);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new ServicesAdapter((this)));
+        recyclerView.setNestedScrollingEnabled(false);
     }
 
     @Override
