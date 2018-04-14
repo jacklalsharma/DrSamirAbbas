@@ -3,6 +3,7 @@ package com.dr.SamirAbbas.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.dr.SamirAbbas.activities.BaseActivity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -165,9 +166,16 @@ public class Doctors implements Parcelable {
         @SerializedName("spe_id")
         @Expose
         private String speId;
+
         @SerializedName("name")
         @Expose
         private String name;
+
+        @SerializedName("name_ar")
+        @Expose
+        private String name_ar;
+
+
         @SerializedName("degree")
         @Expose
         private String degree;
@@ -213,6 +221,7 @@ public class Doctors implements Parcelable {
             this.date = ((String) in.readValue((String.class.getClassLoader())));
             this.isAvailableToday = ((Boolean) in.readValue((Boolean.class.getClassLoader())));
             this.profilePictureUrl = ((String) in.readValue((String.class.getClassLoader())));
+            this.name_ar = ((String) in.readValue((String.class.getClassLoader())));
         }
 
         public Doctor() {
@@ -235,6 +244,9 @@ public class Doctors implements Parcelable {
         }
 
         public String getName() {
+            if(BaseActivity.IsEnglish == false && name_ar != null && name_ar.length() > 0){
+                return name_ar;
+            }
             return name;
         }
 
@@ -300,12 +312,20 @@ public class Doctors implements Parcelable {
             dest.writeValue(date);
             dest.writeValue(isAvailableToday);
             dest.writeValue(profilePictureUrl);
+            dest.writeValue(name_ar);
         }
 
         public int describeContents() {
             return 0;
         }
 
+        public String getName_ar() {
+            return name_ar;
+        }
+
+        public void setName_ar(String name_ar) {
+            this.name_ar = name_ar;
+        }
     }
 
     public static class Paging implements Parcelable

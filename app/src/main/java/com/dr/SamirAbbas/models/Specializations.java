@@ -2,6 +2,8 @@ package com.dr.SamirAbbas.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.dr.SamirAbbas.activities.BaseActivity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -205,6 +207,9 @@ public class Specializations implements Parcelable {
         }
 
         public String getName() {
+            if(BaseActivity.IsEnglish == false && name_ar != null && name_ar.length() > 0){
+                return name_ar;
+            }
             return name;
         }
 
