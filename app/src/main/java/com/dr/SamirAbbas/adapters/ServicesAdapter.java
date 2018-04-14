@@ -19,12 +19,19 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
     private Activity activity;
     private String heading[], content[];
     private boolean status[];
+    private int res[] = {R.drawable.women, R.drawable.obstetrics, R.drawable.reproductive, R.drawable.maternal_fetal_medicine, R.drawable.andrology, R.drawable.dermotology,
+                        R.drawable.surgery, R.drawable.pediatrics, R.drawable.plastic_surgery, R.drawable.womens_breast, R.drawable.bariatric_surgery, R.drawable.ophthalmology,
+                        R.drawable.oto, R.drawable.rthopaedics, R.drawable.pulmonologist, R.drawable.gastroenterology, R.drawable.non_invasive_cardiology, R.drawable.anaesthesia,
+                        R.drawable.intensive_care_unit, R.drawable.dietary_services, R.drawable.stem_cells, R.drawable.emergency, R.drawable.pediatrics};
+
+    private int lasPosition;
 
     public ServicesAdapter(Activity activity) {
         this.activity = activity;
         heading = activity.getResources().getStringArray(R.array.services_list_heading);
         content = activity.getResources().getStringArray(R.array.services_list_content);
         status = new boolean[heading.length];
+        lasPosition = -1;
     }
 
     class ServiceHolder extends RecyclerView.ViewHolder{
@@ -57,8 +64,13 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
         holder.main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(lasPosition != -1){
+                    status[lasPosition] = false;
+                    notifyItemChanged(lasPosition);
+                }
                 status[position] = !status[position];
                 notifyItemChanged(position);
+                lasPosition = position;
             }
         });
 
@@ -69,6 +81,8 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
             holder.image.setVisibility(View.GONE);
             holder.content.setVisibility(View.GONE);
         }
+
+        holder.image.setImageResource(res[position]);
     }
 
     @Override

@@ -76,7 +76,7 @@
             android:id="@+id/image4"
             android:layout_width="match_parent"
             android:scaleType="fitXY"
-            android:layout_height="@dimen/_160sdp"
+            android:layout_height="@dimen/_140sdp"
             android:src="@drawable/sercices_samir_assab"
             android:visibility="gone"
             />
@@ -89,7 +89,6 @@
             android:paddingLeft="@dimen/_20sdp"
             android:paddingRight="@dimen/_20sdp"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
             android:visibility="gone"
             android:text="LOREM IPSUM IS SIMPLY A DUMMY TEXT OF THE PRINTING AND TYPESETTING INDUSTRY.LOREM IPSUM HAS BEEN THE STANDARD DUMMY TEXT EVER SINCE 1500S.WHEN AN UNKNOWN PRINTER TOOK A GALLERY OF TYPE AND SCRAMBLED IT TO MAKE A TYPE SPECIMEN BOOK"/>
 
