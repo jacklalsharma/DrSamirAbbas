@@ -114,6 +114,33 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
             }
         }, 2000);
 
+        if(BaseActivity.IsEnglish == false){
+            navigationView.findViewById(R.id.image1).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image1_1).setVisibility(View.VISIBLE);
+
+
+            navigationView.findViewById(R.id.image2).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image2_2).setVisibility(View.VISIBLE);
+
+
+            navigationView.findViewById(R.id.image3).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image3_3).setVisibility(View.VISIBLE);
+
+
+            navigationView.findViewById(R.id.image5).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image5_5).setVisibility(View.VISIBLE);
+
+
+            navigationView.findViewById(R.id.image6).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image6_6).setVisibility(View.VISIBLE);
+
+
+            navigationView.findViewById(R.id.image7).setVisibility(View.INVISIBLE);
+            navigationView.findViewById(R.id.image7_7).setVisibility(View.VISIBLE);
+
+
+        }
+
     }
 
     @Override
