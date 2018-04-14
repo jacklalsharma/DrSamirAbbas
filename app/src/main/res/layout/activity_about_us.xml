@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.dr.SamirAbbas.activities.AppointmentTimeSlotActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/orange"
+                    android:text="@string/about_us"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/strip"
+        android:background="@drawable/strip"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_4sdp" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/strip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/main"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_below="@+id/strip"
+                    android:background="@drawable/about_us_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_140sdp" />
+
+                <ImageView
+                    android:background="@drawable/confirm_samir_abbas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp" />
+
+                <TextView
+                    android:textAllCaps="true"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:text="@string/info"/>
+
+
+                <TextView
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:text="@string/mission"/>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/nav_strip"
+                    />
+
+                <TextView
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:id="@+id/addressTextView"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:text="@string/mission_desc"/>
+                <TextView
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange"
+                    android:text="@string/values"/>
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:layout_height="@dimen/_2sdp"
+                    android:background="@drawable/nav_strip"
+                    />
+
+                <TextView
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:maxLines="5"
+                    android:id="@+id/numberTextView"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold"
+                    android:text="@string/values_desc"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_below="@id/main"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/_70sdp"
+                android:src="@drawable/logo"
+                android:layout_height="@dimen/_77sdp" />
+
+        </RelativeLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+</RelativeLayout>

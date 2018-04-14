@@ -82,6 +82,10 @@
         <activity
             android:screenOrientation="portrait"
             android:name=".activities.SearchDoctorActivity" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name=".activities.AboutUsActivity" />
     </application>
 
 </manifest>

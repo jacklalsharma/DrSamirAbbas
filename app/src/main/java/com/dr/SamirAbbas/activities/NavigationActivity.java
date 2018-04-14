@@ -98,7 +98,7 @@ public class NavigationActivity extends BaseActivity implements NavigationView.O
             public void onClick(View view) {
                 DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
                 drawer.closeDrawer(GravityCompat.START);
-
+                startActivity(new Intent(getActivity(), AboutUsActivity.class));
             }
         });
 
