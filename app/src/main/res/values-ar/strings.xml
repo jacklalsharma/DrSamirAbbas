@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<resources>
+    <string name="app_name">Samir Abbas Hospital</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="language">الإنجليزية</string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="book_appointment">Book An Appointment</string>
+    <string name="doctors_list">الأطباء</string>
+    <string name="services">خدمات</string>
+    <string name="facilities">مرافق</string>
+    <string name="gallery">صالة عرض</string>
+    <string name="doctors">الأطباء</string>
+    <string name="dr_samir_abbas_hospital">Dr.Samir Abbas Hospital</string>
+    <string name="dentist">اختر صنف</string>
+    <string name="available">Available Today</string>
+    <string name="unavailable">Not Available Today</string>
+    <string name="doc_name">Dr.Ayushmaan Gupta</string>
+    <string name="occupation">Dentist</string>
+    <string name="experience">12 Years experience</string>
+    <string name="qualification">MBBS</string>
+    <string name="appoinment_time_slot">Select a time slot</string>
+    <string name="weekly_schedule">Weekly Schedule</string>
+    <string name="month">MARCH</string>
+    <string name="selected_date">Today</string>
+    <string name="find_and_book">Find \u0026 Book</string>
+    <string name="search_doc">Search a doctor</string>
+    <string name="choose_specialist">Choose Specialist</string>
+    <string name="women_health">Women Health</string>
+    <string name="About_us">ABOUT US</string>
+    <string name="share_app">SHARE APP</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="summary">Summary</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+    <string name="name">NAME</string>
+    <string name="mobile_no">MOBILE NO.</string>
+    <string name="national_id">National Id/QMA</string>
+    <string name="insurance_no">Insurance Number</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="doctor">Doctor</string>
+    <string name="thank_you">Thank You</string>
+    <string name="booking_confirmed">Your Booking Has been Confirmed</string>
+    <string name="booking_id">Booking ID</string>
+    <string name="save">Save</string>
+    <string name="done">Done</string>
+    <string name="facilities_lc">Facilites</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="name_lc">Name</string>
+    <string name="mobile_no_lc">Mobile No</string>
+    <string name="next">Next</string>
+    <string name="enter_patient_detail">ENTER PATIENT DETAILS</string>
+    <string name="contact_us_lc">Contact us</string>
+    <string name="about_us">About us</string>
+    <string name="adress">ADDRESS</string>
+    <string name="phone_no">PHONE NO</string>
+    <string name="email">EMAIL</string>
+    <string name="gallery_lc">Gallery</string>
+    <string name="lab_test">Lab Tests \u0026 Diagnostics</string>
+    <string name="services_lc">Services</string>
+    <string name="emergency_trauma">Emergency \u0026 Trauma Care</string>
+    <string name="Wards_and_rooms">Wards \u0026 Rooms</string>
+    <string name="not_available">Not available</string>
+    <string name="no_slots">No slots available on this date</string>
+    <string name="doctor_not_available">Doctor not available today.</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="evening">Evening</string>
+    <string name="night">Night</string>
+    <string name="slot_not_selected">Select a slot for booking</string>
+    <string name="enter_name">Enter name</string>
+    <string name="enter_number">Enter mobile number</string>
+    <string name="enter_id">Enter national ID</string>
+    <string name="enter_isn_number">Enter insurance number</string>
+    <string name="booking_failed">Failed to book the appointment, try again</string>
+    <string name="screenshot_captured">Screenshot captured</string>
+    <string name="something_wrong">Something is not right, try again</string>
+    <string name="no_doctors_found">No doctors found, try another category.</string>
+    <string name="search_doctor_by_name">Search doctor by name</string>
+    <string name="no_doctor_by_this_name">No doctor found by this name</string>
+    <string name="gallery_desc">We provide affordable, holistic quality healthcare appropriate to the needs of our clients by a team of committed, caring professionals striving through a research driven environment.Scroll down to explore our infrastructure.</string>
+    <string name="mission">Mission</string>
+    <string name="mission_desc">TO BE, AS WE ALWAYS WERE, PIONEER IN THE FIELD OF MEDICINE SEEKING\n DEVELOPMENT AND INITIATING CHANGE TO PROVIDE THE MOST ADVANCED SERVICES WE\n WELL EXTEND KNOWLEDGE AND CARE BEYOND THE LIMITS OF CONVENTIONAL PRACTICE AND\nCREATE A BOND OF TRUST WITH OUR PATIENTS AND THEIR FAMILIES.</string>
+
+    <string name="values">Values</string>
+    <string name="values_desc">• DEDICATED TO TO EVERY PATIENT.\n•CONSTANTLY SEEKING DEVELOPMENT\n•TO DEVELOP TRUST BETWEEN PATIENTS AND COLLEAGUES.\n•TO GIVE TO OUR COMMUNITY\n•TO ADHERE TO ISLAMIC MORALS AND ETHICS\n•TO DISSIPATE KNOWLEDGE AND AWARENESS.</string>
+
+    <string name="info">Professor Samir Abbas, founder of the hospital, and owner of a number of\n women wellness centers kingdom-wise, is an authority in the field of infertility, reproductive endocrinology and women wellness.\nHe is well known international figure in the field of women's reproduction\n and assisted reproductive techniques, and was the first to facilitate a test\n tube baby in the arab and muslim world in 1986, he also performed the very\n first successful in-vitro fertilization procedure in the kingdom resulting in a\nhealthy neonate.</string>
+    <string-array name="services_list_heading">
+        <item>Women’s Health Department</item>
+        <item>General Obstetrics and Gynaecology</item>
+        <item>Reproductive Endocrinology</item>
+        <item>Maternal Fetal Medicine</item>
+        <item>Andrology</item>
+        <item>Dermatology / Cosmetology</item>
+        <item>Surgery</item>
+        <item>Urology</item>
+        <item>Plastic Surgery</item>
+        <item>Women’s Breast Disease</item>
+        <item>Bariatric Surgery</item>
+        <item>Ophthalmology</item>
+        <item>Oto-rhinolaryngology (ENT)</item>
+        <item>Orthopaedics</item>
+        <item>Pulmonology</item>
+        <item>Gastroenterology</item>
+        <item>Non-invasive Cardiology</item>
+        <item>Anaesthesia</item>
+        <item>Intensive Care Unit (ICU-Adults)</item>
+        <item>Dietary Services</item>
+        <item>Stem Cells / Rejuvenate Therapy</item>
+        <item>Emergency Medicine department</item>
+        <item>Pediatrics and neonatal department</item>
+
+    </string-array>
+
+
+
+    <string-array name="services_list_content">
+        <item>Dr. Samir Abbas’s Women’s Health Department offers a coordinated, customised care in a compassionate environment. We aim to blend outstanding medical treatment with remarkable personal care, and our women’s health services enhance this goal by combining numerous specialties.
+Women, in every stage of their lives, can count on receiving undivided attention and personalized treatment in our hospital. Additionally, our physicians conduct several clinical trials to advance patient care.
+</item>
+
+        <item>We have an extraordinary team of obstetricians, gynaecologists, and other medical professionals who are committed to providing compassionate, research validated effective care and treatment to patients. Using the latest technologies and techniques, our specialists provide diagnosis and treatment for a full range of obstetric and gynaecological conditions.
+\n\n•Help pregnant women in achieving an enjoyable pregnancy in each stage of the journey and a comfortable, pain controlled, safe delivery.
+\n•Looking after the health needs of women in pre conception stage for advice and before and after delivery.
+\n•Contraceptive advice, tailored for couples seeking pregnancy spacing.
+\n•Managing benign gynaecological illness.
+\n•Dealing with gynaecological emergencies.
+\n•Performing gynaecological endoscopic surgery.
+</item>
+
+        <item>Our highly skilled endocrinologists at Dr. Samir Abbas Hospital treat patients within a wide spectrum of endocrine disorders. They are specialised in managing endocrine disorders.
+\n\n•Helping couples to achieve a safe pregnancy using state of art assisted reproductive techniques.
+\n•Managing menstrual problems.
+\n•Managing menopausal symptoms and concerns.
+</item>
+
+        <item>Dr. Samir Abbas Hospital provides compassionate, specialised and advanced management of complex pregnancies for women and their unborn children. Services include: Family planning and counselling, Genetic counselling, prenatal testing and diagnoses, prenatal care tailored to the needs of each mother and other consultations and diagnostic services.
+\n\n•Performing high level in utero fetal ultrasounds.
+\n•Early intervention in identified risks to mother and fetus.
+\n•Advise on outcomes of complicated pregnancies.
+\n•Managing high risk pregnancies.
+\n•Managing high risk deliveries and complicated caesarean sections.</item>
+
+        <item>The Andrology department at Dr. Samir Abbas Hospital, shared by senior consultant, offers a full range of specialised tests and services for the evaluation and treatment of male infertility. We provide an excellent setting for couples to achieve their reproductive goals.
+\n\n•Helping men with sexual dysfunctions to achieve normality.
+\n•Assist the reproductive endocrinology unit in managing men with the inability to reproduce.
+\n•Assisting in diagnoses/ correcting sexual dysfunction in men.
+\n•Working closely with endocrinology unit to assist in male reproduction management.
+\n•Performing surgical corrective male reproductive tract procedures.</item>
+
+        <item>Houston Methodist dermatologists deliver specialised care to patients suffering from diseases or conditions affecting the skin. They offer diagnosis and treatment of a variety of common and less common skin conditions. The Cosmetology department at our hospital is also led by some top most cosmetic surgeons. The department is well-equipped and is proficient to handle all kinds of cosmetology requirements.
+Using latest technologies and experts in the field, we offer our individually planned services in a relaxing environment.
+\n\n•Dealing with benign skin conditions.
+\n•Improving skin conditions and dealing with wrinkled skin.
+\n•Improvement of most skin conditions and treatment of age and sun damaged related skin.
+\n•Hair Transplants.
+\n•Permanent removal of unwanted hair.
+\n•Full skin care and beauty.</item>
+
+        <item>Our integrated approach to provide safe and effective surgical care to you consists of informed patient care in an environment of latest technology in medical and surgical treatments. Our team of physicians and specialists work with you to ensure your before, during and after surgical care is optimal and of highest quality.
+        \nWe have a great team of surgeons and health professionals who aim to achieve the best outcomes from your surgery. We offer expertise across a wide range of surgical and surgical support specialties, and our surgeons use the newest techniques and procedures to prevent/minimise complications.
+\n\n•Dealing with common surgical presentations:
+\n•Dealing with common surgical presentations:
+\n•body lumps
+\n•gastro-intestinal tract bleeding
+\n•painful orifice conditions</item>
+
+
+        <item>We provide an optimal environment for even the most complex surgeries, based on today’s most sophisticated technology and advanced research.
+\n\n•Managing urinary tract infections.
+\n•Urinary stones
+\n•bladder dysfunction and incontinence.</item>
+
+        <item>Our highly skilled specialists, experienced in improving appearance, function and mobility of patients, have access to the latest technologies related to reconstructive and cosmetic surgery.
+\n\n•Working in liaison with the department dermatology in achieving the patient desired facial and body appearance.
+\n•Breast reduction and augmentation.
+\n•Restorative surgery (scar revision, corrective surgery).</item>
+
+        <item>Our hospital offers comprehensive assessment and treatment of breast disease, benign lumps and malignant growths. Our services include various aspects of the process of breast disease; prevention, detection, treatment choices and reconstructive surgery.
+Our support services include; genetic and nutritional counselling, psychosocial support and massage therapy assisting you through the treatment process.
+\n\n•A dedicated unit for:
+\n•Early detection screening.
+\n•Treatment of benign and malignant breast lumps.
+\n•Full support services throughout the process.</item>
+
+        <item>We offer multiple surgical options using the most advanced techniques for treating obesity and its related conditions. The hospital is equipped with surgical suites, advanced equipment, and patient rooms customized for the care and comfort of bariatric patients.
+\n\n•A dedicated unit for:
+\n•Helping the obese to reduce weight through different approaches including surgeries, diet plans, psychology sessions and physical treatments.
+\n•Solutions offered surgically are permanent.</item>
+
+        <item>Dr. Samir Abbas ophthalmologists have expertise in all subspecialties of ophthalmology, with access to specialized operating suites designed for unique conditions and complex eye surgeries. They provide patients with medical and surgical treatment for eye disorders and diseases in even the most challenging cases.
+\n\n•Management of benign eye conditions.
+\n•Corrective eye sight procedures.
+\n•Specialized anterior and posterior segment procedures.</item>
+
+        <item>Our ENT specialists provide full range of medical and surgical services for patients with ear, nose and throat problems.
+\n\n•Early detection and management of hearing problems.
+\n•Surgery for tonsils and adenoids.
+\n•Correction of nasal deformities.
+\n•Sinus endoscopic surgery.
+\n•Surgery for snoring.</item>
+
+        <item>Our skilled team of orthopaedic surgeons use the latest innovative techniques, pioneering new technology to deliver exceptional care to patients with musculoskeletal disease or injuries. As a patient at Dr. Samir Abbas Hospital, you will have access to unsurpassed the expertise of our multidisciplinary team of orthopaedic surgeons, delivering a full a full range of services.
+\n\n•Managing all types of fractures.
+\n•Performing all joint scopes.
+\n•Performing hip and knee replacements.</item>
+
+        <item>Our pulmonologist in Dr. Samir Abbas Hospital is dedicated to treatment of a variety of lung diseases.
+\n\n•Management of common respiratory problems in adults such as bronchial asthma, pneumonia and other diseases presenting with breathing difficulties.
+\n•Performing lung function tests and advising on related positive lifestyle modification.</item>
+
+        <item>Our gastroenterology team of doctors, nurses and other health care professionals work together to diagnose and treat digestive disorders. These include diseases of the oesophagus, stomach, liver, pancreas, gall bladder, biliary tract, and colon.
+\n\n•Managing digestion and gastro intestinal problems.
+\n•Performing diagnostic and therapeutic upper and lower gastro intestinal scopes.
+\n•Providing temporary interventional solutions for weight reduction such as gastric balloons.</item>
+
+        <item>Non-invasive Cardiology Our non-invasive cardiologists focus on the detection and treatment of heart disease, using external tests—rather than instruments inserted into the body—to evaluate and diagnose cardiac disorders.
+\n\n•Providing general advice and management on risk factors for heart disease.
+\n•Medical diagnosis and investigation of cardiovascular conditions including angina pains, high blood pressure.
+\n•Providing blood thinning services (anti-coagulation).</item>
+
+        <item>The type of anaesthesia administered will depend upon the procedure performed. We offer a full range of services, and patients are encouraged to discuss preferences for the type of service to be used with their surgeons and anaesthesiologists.
+\n\n•Provide safe anaesthesia and sedation to patients undergoing minor or major operations and procedures.
+\n•Provide epidural anaesthesia.
+\n•Effective management of post-operative pain.
+\n•Management of chronic pain.</item>
+
+        <item>One of the goals of the ICU is to promote a healing environment. Our ICU is designed to care for patients with potentially life-threatening conditions and following major surgery when more intense monitoring and observation is required.
+\n\n•Provide support and management to patients admitted to adult critical care for medical or surgical reasons.</item>
+
+        <item>Inpatient or outpatient, our dedicated team of professionals will help you define and reach your individual health goals.
+Maintaining a healthy weight and eating a well balanced nutritious can help you function in all aspects of your life. The team, headed by clinical dieticians oversee all dietary services provided.
+\n\n•Arranging therapeutic diets for inpatients.
+\n•Overseeing all food services provided.
+\n•Providing weight reduction advice and monitoring and general health education regarding positive life style.</item>
+
+        <item>A new trend of therapy that will become a fundamental part of health management in the near future.
+\n\n•Joint pain relief.
+\n•Skin rejuvenation and others.</item>
+
+        <item>Emergency Department of Dr. Samir Abbas Hospital provides patient care with critical situation services through a team of competent and dedicated doctors and specialists with high qualifications, in addition the department is fully equipped with the latest technologies, devices and tools.
+The emergency department provides patients with a high level of optimal medical care, in full coordination with a multidisciplinary approach with all medical and clinical departments, when needed and over 24 / 7. Taking strict precautions to control the infection in order to ensure the safety and comfort of patients and to gain their satisfaction, also we have created performance indicators that monitor the staff performance, seeking to remain the best and most trusted department of the region.</item>
+
+        <item>The Pediatric and Neonatal Department at Dr. Samir Abbas Hospital provides integrated medical care for children from birth until the age of 14 under the supervision of a group of specialist and consultant physicians, 24 hours a day, seven days a week, in outpatient clinics, inpatient and emergency unit. In addition the newborn unit is equipped with cameras, where the mother can see her child anytime she likes. Also the Neonatal intensive care unit is equipped with state-of-the-art medical equipment, incubators and high-frequency ventilation.</item>
+
+
+
+
+
+    </string-array>
+</resources>
