@@ -90,6 +90,20 @@
     <string name="values_desc">• DEDICATED TO TO EVERY PATIENT.\n•CONSTANTLY SEEKING DEVELOPMENT\n•TO DEVELOP TRUST BETWEEN PATIENTS AND COLLEAGUES.\n•TO GIVE TO OUR COMMUNITY\n•TO ADHERE TO ISLAMIC MORALS AND ETHICS\n•TO DISSIPATE KNOWLEDGE AND AWARENESS.</string>
 
     <string name="info">Professor Samir Abbas, founder of the hospital, and owner of a number of\n women wellness centers kingdom-wise, is an authority in the field of infertility, reproductive endocrinology and women wellness.\nHe is well known international figure in the field of women's reproduction\n and assisted reproductive techniques, and was the first to facilitate a test\n tube baby in the arab and muslim world in 1986, he also performed the very\n first successful in-vitro fertilization procedure in the kingdom resulting in a\nhealthy neonate.</string>
+
+
+    <string name="getting_slot">Getting time slot</string>
+    <string name="getting_slot_msg">Please wait while we are getting the time slots...</string>
+
+    <string name="getting_doctor">Getting doctors list</string>
+    <string name="getting_doctor_msg">Please wait while we are getting doctors list</string>
+
+    <string name="getting_special">Getting speciality list</string>
+    <string name="getting_special_msg">Please wait while we are getting speciality list</string>
+
+    <string name="book">Booking appointment</string>
+    <string name="book_msg">Please wait while we are booking your appointment...</string>
+
     <string-array name="services_list_heading">
         <item>Women’s Health Department</item>
         <item>General Obstetrics and Gynaecology</item>

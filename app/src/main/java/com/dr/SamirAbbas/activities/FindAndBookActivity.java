@@ -76,7 +76,7 @@ public class FindAndBookActivity extends BaseActivity {
     }
 
     private void getList(){
-        DialogBox.ShowProgressDialog(this, "Getting speciality list", "Please wait while we are getting speciality list");
+        DialogBox.ShowProgressDialog(this, R.string.getting_special, R.string.getting_special_msg);
 
         Ion.with(this)
                 .load("GET", Endpoints.SpecialityList)

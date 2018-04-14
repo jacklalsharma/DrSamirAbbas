@@ -118,7 +118,7 @@ public class SearchDoctorActivity extends BaseActivity{
 
     //Gets the Doctor list for selected specialization....
     private void getDoctorsList(){
-        DialogBox.ShowProgressDialog(this, "Getting doctors list", "Please wait while we are getting doctors list");
+        DialogBox.ShowProgressDialog(this, R.string.getting_doctor, R.string.getting_doctor_msg);
 
         Date c = Calendar.getInstance().getTime();
         System.out.println("Current time => " + c);
@@ -184,7 +184,7 @@ public class SearchDoctorActivity extends BaseActivity{
 
 
     private void getSpecialityList(){
-        DialogBox.ShowProgressDialog(this, "Getting speciality list", "Please wait while we are getting speciality list");
+        DialogBox.ShowProgressDialog(this, R.string.getting_special, R.string.getting_special_msg);
 
         Ion.with(this)
                 .load("GET", Endpoints.SpecialityList)

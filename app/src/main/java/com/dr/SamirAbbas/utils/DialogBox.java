@@ -28,7 +28,7 @@ public class DialogBox {
      * @param title
      * @param message
      */
-    public static void ShowProgressDialog(Activity activity, String title, String message){
+    public static void ShowProgressDialog(Activity activity, int title, int message){
         try{
             if(customProgressDialog != null){
                 if(customProgressDialog.isShowing()){

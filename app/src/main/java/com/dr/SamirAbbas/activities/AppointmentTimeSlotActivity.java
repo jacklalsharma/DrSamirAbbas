@@ -184,7 +184,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
 
     public void getTimingsSlot(){
 
-        DialogBox.ShowProgressDialog(this, "Getting time slot", "Please wait while we are getting the time slots...");
+        DialogBox.ShowProgressDialog(this, R.string.getting_slot,  R.string.getting_slot_msg);
         String url = "";
         for(int i = 0 ; i < dateArrayList.size() ; ++i){
             if(dateArrayList.get(i).isSelected()){

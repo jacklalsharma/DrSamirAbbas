@@ -117,7 +117,7 @@ public class AvailableDoctorsListActivity extends BaseActivity{
 
     //Gets the Doctor list for selected specialization....
     private void getDoctorsList(){
-        DialogBox.ShowProgressDialog(this, "Getting doctors list", "Please wait while we are getting doctors list");
+        DialogBox.ShowProgressDialog(this, R.string.getting_doctor, R.string.getting_doctor_msg);
 
         Date c = Calendar.getInstance().getTime();
         System.out.println("Current time => " + c);

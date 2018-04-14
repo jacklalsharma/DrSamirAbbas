@@ -90,7 +90,7 @@ public class SummaryActivity extends BaseActivity {
     }
 
     private void bookAppointment(){
-        DialogBox.ShowProgressDialog(this, "Booking appointment", "Please wait while we are booking your appointment...");
+        DialogBox.ShowProgressDialog(this, R.string.book, R.string.book_msg);
         final JsonObject object = new JsonObject();
         object.addProperty("slot_id", slot.getId());
         object.addProperty("name", name);
