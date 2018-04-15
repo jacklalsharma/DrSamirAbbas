@@ -30,13 +30,14 @@
                     android:textSize="@dimen/_14sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
-                    android:text="@string/dentist"
+                    android:text="@string/search_doc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
 
 
 
                 <android.support.v7.widget.AppCompatSpinner
+                    android:visibility="gone"
                     android:popupBackground="#f6f6f6"
                     android:id="@+id/docOccupationSpinner"
                     android:layout_marginLeft="@dimen/_5sdp"

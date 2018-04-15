@@ -142,6 +142,9 @@ public class AvailableDoctorsListActivity extends BaseActivity{
                                     Doctors doctors = new Gson().fromJson(object.toString(), Doctors.class);
                                     mList.clear();
                                     mList.addAll(doctors.getData().getDoctors());
+                                    for(int i = 0 ; i < mList.size() ; ++i){
+                                        mList.get(i).setSpecilization(specializationArrayList.get(selectedSpecialisation).getName());
+                                    }
                                     doctorInfoAdapter.notifyDataSetChanged();
 
                                     if(mList.size() == 0){

@@ -58,7 +58,7 @@ public class SummaryActivity extends BaseActivity {
         ((TextView) findViewById(R.id.date)).setText(date);
 
         ((TextView) findViewById(R.id.docNameTextView)).setText("Dr. " + doctor.getName());
-        ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
+        ((TextView) findViewById(R.id.occupationTextView)).setText(doctor.getSpecilization());
         ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
         Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
 

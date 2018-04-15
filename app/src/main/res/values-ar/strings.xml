@@ -104,6 +104,9 @@
     <string name="book">Booking appointment</string>
     <string name="book_msg">Please wait while we are booking your appointment...</string>
 
+    <string name="failed_slot_fetching">Failed to fetch slot details try again</string>
+
+
     <string-array name="services_list_heading">
         <item>Women’s Health Department</item>
         <item>General Obstetrics and Gynaecology</item>

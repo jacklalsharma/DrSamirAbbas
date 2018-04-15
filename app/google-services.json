@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "629363177041",
+    "firebase_url": "https://drsamirabbas-3cdc8.firebaseio.com",
+    "project_id": "drsamirabbas-3cdc8",
+    "storage_bucket": "drsamirabbas-3cdc8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:629363177041:android:8fbb9d738bb83b10",
+        "android_client_info": {
+          "package_name": "com.dr.SamirAbbas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "629363177041-sh19burqt0h3i7ga98e9vm6mhlkchd43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dr.SamirAbbas",
+            "certificate_hash": "6a95e3f04fb4b5600fd07220cfe7c3c478bf3155"
+          }
+        },
+        {
+          "client_id": "629363177041-7egdv6si5lfdj0pd30n4lvf139v7lp2l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAsegy6p5JIzuX-xrAaNB5yhiMkRwwOcE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "629363177041-7egdv6si5lfdj0pd30n4lvf139v7lp2l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

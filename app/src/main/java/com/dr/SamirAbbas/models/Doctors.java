@@ -159,6 +159,15 @@ public class Doctors implements Parcelable {
 
     public static class Doctor implements Parcelable
     {
+        private String specilization;
+
+        public String getSpecilization() {
+            return specilization;
+        }
+
+        public void setSpecilization(String specilization) {
+            this.specilization = specilization;
+        }
 
         @SerializedName("id")
         @Expose

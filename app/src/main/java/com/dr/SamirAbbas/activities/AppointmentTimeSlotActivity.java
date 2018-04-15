@@ -72,10 +72,8 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
         monthTextView = (TextView) findViewById(R.id.monthTextView);
 
         doctor = getIntent().getParcelableExtra("doctor");
-        String speciality = getIntent().getStringExtra("speciality");
-        setCalendar();
         ((TextView) findViewById(R.id.docNameTextView)).setText("Dr. " + doctor.getName());
-        ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
+        ((TextView) findViewById(R.id.occupationTextView)).setText(doctor.getSpecilization());
         ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
         Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
 
@@ -85,6 +83,11 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                 proceedWithBooking();
             }
         });
+
+        if(!doctor.getIsAvailableToday()){
+            findViewById(R.id.availabilityTextView).setVisibility(View.INVISIBLE);
+        }
+        setCalendar();
 
     }
 
@@ -208,7 +211,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                 if(object.getBoolean("success")){
                                     AppointmentSlot appointmentSlot = new Gson().fromJson(object.toString(), AppointmentSlot.class);
 
-                                    if(appointmentSlot.getData().getSlots().getMorning() != null){
+                                    if(appointmentSlot.getData().getSlots().getMorning() != null && appointmentSlot.getData().getSlots().getMorning().size() > 0){
                                         mList1.clear();
                                         mList1.addAll(appointmentSlot.getData().getSlots().getMorning());
                                         adapter1.notifyDataSetChanged();
@@ -220,7 +223,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         ((TextView) findViewById(R.id.text1)) .setText(str);
                                     }
 
-                                    if(appointmentSlot.getData().getSlots().getAfternoon() != null){
+                                    if(appointmentSlot.getData().getSlots().getAfternoon() != null && appointmentSlot.getData().getSlots().getAfternoon().size() > 0){
                                         mList2.clear();
                                         mList2.addAll(appointmentSlot.getData().getSlots().getAfternoon());
                                         adapter2.notifyDataSetChanged();
@@ -232,7 +235,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         ((TextView) findViewById(R.id.text2)) .setText(str);
                                     }
 
-                                    if(appointmentSlot.getData().getSlots().getEvening() != null){
+                                    if(appointmentSlot.getData().getSlots().getEvening() != null && appointmentSlot.getData().getSlots().getEvening().size() > 0){
                                         mList3.clear();
                                         mList3.addAll(appointmentSlot.getData().getSlots().getEvening());
                                         adapter3.notifyDataSetChanged();
@@ -240,11 +243,11 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         mList3.clear();
                                         adapter3.notifyDataSetChanged();
                                         String str = getResources().getString(R.string.evening) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
-                                        ((TextView) findViewById(R.id.text1)) .setText(str);
+                                        ((TextView) findViewById(R.id.text3)) .setText(str);
                                     }
 
 
-                                    if(appointmentSlot.getData().getSlots().getNight() != null){
+                                    if(appointmentSlot.getData().getSlots().getNight() != null && appointmentSlot.getData().getSlots().getNight().size() > 0){
 
                                         mList4.clear();
                                         mList4.addAll(appointmentSlot.getData().getSlots().getNight());
@@ -253,7 +256,7 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                         mList4.clear();
                                         adapter4.notifyDataSetChanged();
                                         String str = getResources().getString(R.string.night) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
-                                        ((TextView) findViewById(R.id.text1)) .setText(str);
+                                        ((TextView) findViewById(R.id.text4)) .setText(str);
                                     }
 
 
@@ -262,12 +265,24 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
                                 }else{
                                     //Failed...
                                     Toast.makeText(getActivity(), R.string.no_slots, Toast.LENGTH_SHORT).show();
+                                    String str = getResources().getString(R.string.morning) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                    ((TextView) findViewById(R.id.text1)) .setText(str);
+
+                                    String str2 = getResources().getString(R.string.afternoon) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                    ((TextView) findViewById(R.id.text2)) .setText(str2);
+
+                                    String str3 = getResources().getString(R.string.evening) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                    ((TextView) findViewById(R.id.text3)) .setText(str3);
+
+                                    String str4 = getResources().getString(R.string.night) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
+                                    ((TextView) findViewById(R.id.text4)) .setText(str4);
                                 }
                             }catch (JSONException e1){
 
                             }
                         }else{
                             //Failed...
+                            Toast.makeText(getActivity(), R.string.failed_slot_fetching, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

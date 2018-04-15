@@ -59,8 +59,8 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
     @Override
     public void onBindViewHolder(InfoViewHolder holder, final int position) {
         holder.name.setText(list.get(position).getName());
-        holder.occupation.setText(specialization);
-        holder.experience.setText(list.get(position).getExperience() + " years experience");
+        holder.occupation.setText(list.get(position).getSpecilization());
+        holder.experience.setText(list.get(position).getExperience());
         holder.qualification.setText(list.get(position).getDegree());
         //holder.profile.setImageResource(R.drawable.blank_profile);
         Glide.with(mContext).load(list.get(position).getProfilePictureUrl()).into(holder.profile);
@@ -77,7 +77,7 @@ public class DoctorInfoAdapter extends RecyclerView.Adapter<DoctorInfoAdapter.In
 
                 Intent intent = new Intent(mContext, AppointmentTimeSlotActivity.class);
                 intent.putExtra("doctor", list.get(position));
-                intent.putExtra("speciality", specialization);
+                intent.putExtra("speciality", list.get(position).getSpecilization());
                 mContext.startActivity(intent);
 
             }

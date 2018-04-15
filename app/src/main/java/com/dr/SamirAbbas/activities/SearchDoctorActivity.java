@@ -126,7 +126,7 @@ public class SearchDoctorActivity extends BaseActivity{
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
         String formattedDate = df.format(c);
 
-        String url = String.format(Endpoints.GetDoctors, "" + specializationArrayList.get(selectedSpecialisation).getId() , "" + formattedDate);
+        String url = String.format(Endpoints.SearchDoctor,  formattedDate);
         Log.d("URL", url);
         Ion.with(this)
                 .load("GET", url)
@@ -149,6 +149,16 @@ public class SearchDoctorActivity extends BaseActivity{
                                     Doctors doctors2 = new Gson().fromJson(object.toString(), Doctors.class);
                                     mainList = new ArrayList<>();
                                     mainList.addAll(doctors2.getData().getDoctors());
+
+
+                                    for(int i = 0 ; i < specializationArrayList.size() ; ++i){
+                                        for(int j = 0 ; j < mList.size() ; ++j){
+                                            if(mList.get(j).getSpeId().equals("" + specializationArrayList.get(i).getId() + "")){
+                                                mList.get(j).setSpecilization(specializationArrayList.get(i).getName());
+                                                mainList.get(j).setSpecilization(specializationArrayList.get(i).getName());
+                                            }
+                                        }
+                                    }
 
                                     if(mList.size() == 0){
                                         findViewById(R.id.no_docs).setVisibility(View.VISIBLE);
@@ -266,5 +276,8 @@ public class SearchDoctorActivity extends BaseActivity{
         ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(this, R.layout.spinner_list_item, list);
         mAdapter.setDropDownViewResource(R.layout.spinner_list_item);
         spinner.setAdapter(mAdapter);
+
+        spinner.setVisibility(View.GONE);
+        ((TextView) findViewById(R.id.docTextView)).setText(R.string.search_doc);
     }
 }
