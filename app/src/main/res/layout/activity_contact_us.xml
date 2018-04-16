@@ -76,6 +76,7 @@
                     android:layout_height="@dimen/_220sdp" />
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_marginTop="@dimen/_15sdp"
                     android:gravity="center"
                     android:layout_width="match_parent"
@@ -103,10 +104,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/_14sdp"
-                    android:textStyle="bold"
-                    android:text="AL KURNAYUSH RD,ASH SHATI,6906 AL KURNAYUSH RD ASH SHATI DISTRICT JEDDAH 234113597,JEDDAH 234113597,SAUDI ARABIA "/>
+                    android:text="@string/address"/>
 
                 <TextView
+                    android:textStyle="bold"
                     android:gravity="center"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_width="match_parent"
@@ -134,10 +135,10 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold"
                     android:text=" + 966126187777"/>
 
                 <TextView
+                    android:textStyle="bold"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:gravity="center"
                     android:layout_width="match_parent"
@@ -165,7 +166,6 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/blue"
                     android:textSize="@dimen/_13sdp"
-                    android:textStyle="bold"
                     android:text="BADAR.ABBAS@DSHAH.SA"/>
 
                 <ImageView

@@ -1,6 +1,7 @@
 package com.dr.SamirAbbas.adapters;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dr.SamirAbbas.R;
+import com.dr.SamirAbbas.activities.ImageViewerActivity;
 
 /**
  * Created by Anurag on 4/14/2018.
@@ -81,7 +83,15 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
             holder.image.setVisibility(View.GONE);
             holder.content.setVisibility(View.GONE);
         }
-
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(activity, ImageViewerActivity.class);
+                intent.putExtra("image", res[position]);
+                intent.putExtra("title", heading[position]);
+                activity.startActivity(intent);
+            }
+        });
         holder.image.setImageResource(res[position]);
     }
 

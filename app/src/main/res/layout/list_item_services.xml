@@ -82,6 +82,7 @@
             />
 
         <TextView
+            android:background="@color/white"
             android:id="@+id/text4"
             android:layout_width="match_parent"
             android:paddingBottom="@dimen/_10sdp"

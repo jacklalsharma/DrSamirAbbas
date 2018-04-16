@@ -32,7 +32,7 @@
             android:paddingBottom="@dimen/_15sdp"
             android:paddingTop="@dimen/_15sdp"
             android:background="?android:attr/selectableItemBackground"
-            android:text="@string/language"
+            android:text="English"
             android:layout_weight="1"
             android:id="@+id/english"
             android:layout_width="match_parent"

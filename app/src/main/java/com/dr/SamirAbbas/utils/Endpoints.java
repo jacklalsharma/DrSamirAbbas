@@ -5,7 +5,10 @@ package com.dr.SamirAbbas.utils;
  */
 
 public class Endpoints {
-    public static final String BaseURL = "https://hospoital.000webhostapp.com/booking-apis/apis";
+
+    public static final String BASE = "https://hospoital.000webhostapp.com/";
+
+    public static final String BaseURL = "https://hospoital.000webhostapp.com/booking/apis";
 
     public static final String SpecialityList = BaseURL + "/get_specializations";
 
@@ -16,4 +19,6 @@ public class Endpoints {
     public static final String BookDoctor = BaseURL + "/book_doctor";
 
     public static final String SearchDoctor = BaseURL + "/search_doctors?available_on=%s&name=";
+
+    public static final String SavePushToken = BASE + "push-notification/apis/save_push_token";
 }
