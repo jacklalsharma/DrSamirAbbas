@@ -277,11 +277,11 @@
                         android:layout_height="match_parent">
 
                         <ImageView
-                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
                             android:layout_gravity="center"
-                            android:background="@drawable/nav_contact_us"
-                            android:layout_width="@dimen/_45sdp"
-                            android:layout_height="@dimen/_45sdp"/>
+                            android:background="@drawable/contacticon"
+                            android:layout_width="@dimen/_37sdp"
+                            android:layout_height="@dimen/_37sdp"/>
 
                         <TextView
                             android:textSize="@dimen/_10sdp"
