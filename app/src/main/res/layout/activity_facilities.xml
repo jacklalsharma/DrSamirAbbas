@@ -28,7 +28,7 @@
                 <TextView
                     android:layout_alignParentStart="true"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_15sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
                     android:text="@string/facilities_lc"
@@ -427,6 +427,7 @@
     </android.support.v4.widget.NestedScrollView>
 
     <ImageView
+        android:visibility="gone"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:background="@drawable/logo"

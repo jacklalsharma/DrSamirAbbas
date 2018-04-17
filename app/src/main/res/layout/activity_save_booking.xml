@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_alignParentStart="true"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_15sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
                     android:text="@string/confirmation"
@@ -44,6 +44,7 @@
     </android.support.design.widget.AppBarLayout>
 
     <ImageView
+        android:visibility="gone"
         android:layout_alignParentEnd="true"
         android:layout_width="@dimen/_70sdp"
         android:layout_alignParentBottom="true"
@@ -133,14 +134,17 @@
                     />
 
                 <TextView
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:background="@drawable/id"
                     android:id="@+id/bookingIdTextView"
                     android:layout_below="@+id/textView"
-                    android:layout_marginTop="@dimen/_8sdp"
-                    android:layout_marginLeft="@dimen/_90sdp"
+                    android:layout_marginLeft="@dimen/_80sdp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
                     android:text="1256BC45"
-                    android:paddingRight="@dimen/_5sdp"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10sdp"
                     />
@@ -151,7 +155,7 @@
                     android:layout_toRightOf="@+id/bookingIdTextView"
                     android:layout_width="@dimen/_35sdp"
                     android:layout_height="@dimen/_20sdp"
-                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
                     android:text="@string/save"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_10sdp"
@@ -160,22 +164,26 @@
             </RelativeLayout>
 
 
+            <Button
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/finishButton"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:text="@string/done"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:textColor="@color/dark_green"
+                android:background="@drawable/btn_border_green"
+                />
+
+
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
 
-    <Button
-        android:id="@+id/finishButton"
-        android:layout_width="@dimen/_80sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:text="@string/done"
-        android:textStyle="bold"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/_15sdp"
-        android:textColor="@color/dark_green"
-        android:background="@drawable/btn_border_green"
-        />
 
 
 </RelativeLayout>

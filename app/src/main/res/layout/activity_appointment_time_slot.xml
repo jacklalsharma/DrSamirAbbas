@@ -30,7 +30,7 @@
                 <TextView
                     android:layout_alignParentStart="true"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_15sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
                     android:text="@string/appoinment_time_slot"
@@ -234,29 +234,34 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/_10sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:src="@drawable/ic_morning"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_morning"/>
+
+
                         <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:textAlignment="center"
                             android:text="@string/morning"
                             android:id="@+id/text1"
                             android:layout_width="wrap_content"
                             android:layout_centerHorizontal="true"
                             android:layout_height="wrap_content" />
+
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/morningRecyclerView"
                             android:layout_below="@+id/text1"
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
                             android:layout_height="wrap_content">
 
                         </android.support.v7.widget.RecyclerView>
@@ -275,18 +280,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/_10sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:src="@drawable/ic_afternoon"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_afternoon"/>
+
+
                         <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:textAlignment="center"
                             android:text="@string/afternoon"
                             android:id="@+id/text2"
@@ -297,7 +306,7 @@
                             android:id="@+id/afternoonRecyclerView"
                             android:layout_below="@+id/text2"
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
                             android:layout_height="wrap_content">
 
                         </android.support.v7.widget.RecyclerView>
@@ -316,19 +325,23 @@
                     android:layout_height="wrap_content">
 
 
-                    <ImageView
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/_10sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:src="@drawable/ic_evening"/>
 
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_evening"/>
+
+
                         <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:textAlignment="center"
                             android:text="@string/evening"
                             android:id="@+id/text3"
@@ -339,7 +352,7 @@
                             android:id="@+id/eveningRecyclerView"
                             android:layout_below="@+id/text3"
                             android:layout_width="match_parent"
-                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:layout_marginLeft="@dimen/_40sdp"
                             android:layout_height="wrap_content">
 
                         </android.support.v7.widget.RecyclerView>
@@ -356,18 +369,22 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:layout_width="@dimen/_40sdp"
-                        android:layout_gravity="center_vertical"
-                        android:padding="@dimen/_10sdp"
-                        android:layout_height="@dimen/_40sdp"
-                        android:src="@drawable/ic_night"/>
 
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_10sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:src="@drawable/ic_night"/>
+
                         <TextView
+                            android:layout_marginTop="@dimen/_5sdp"
                             android:textAlignment="center"
                             android:text="@string/night"
                             android:id="@+id/text4"
@@ -400,16 +417,15 @@
         android:layout_height="@dimen/_77sdp" />
 
     <Button
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_3sdp"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:layout_marginLeft="@dimen/_20sdp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
         android:id="@+id/bookAppointmentButton"
         android:textColor="@color/dark_green"
         android:background="@drawable/btn_border_green"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_35sdp"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_30sdp"
         android:text="Book" />
 
 </RelativeLayout>

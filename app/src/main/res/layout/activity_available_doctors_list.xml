@@ -27,7 +27,7 @@
                 <TextView
                     android:id="@+id/docTextView"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_14sdp"
+                    android:textSize="@dimen/_15sdp"
                     android:layout_centerVertical="true"
                     android:textColor="@color/orange"
                     android:text="@string/dentist"
@@ -71,6 +71,7 @@
     </android.support.v7.widget.RecyclerView>
 
     <ImageView
+        android:visibility="gone"
         android:layout_alignParentRight="true"
         android:background="@drawable/logo"
         android:layout_width="@dimen/_80sdp"
