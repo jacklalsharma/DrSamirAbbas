@@ -72,8 +72,9 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
         monthTextView = (TextView) findViewById(R.id.monthTextView);
 
         doctor = getIntent().getParcelableExtra("doctor");
+        String speciality = getIntent().getStringExtra("speciality");
         ((TextView) findViewById(R.id.docNameTextView)).setText("Dr. " + doctor.getName());
-        ((TextView) findViewById(R.id.occupationTextView)).setText(doctor.getSpecilization());
+        ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
         ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
         Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
 
@@ -263,8 +264,20 @@ public class AppointmentTimeSlotActivity extends BaseActivity {
 
 
                                 }else{
+                                    mList4.clear();
+                                    adapter4.notifyDataSetChanged();
+
+                                    mList3.clear();
+                                    adapter3.notifyDataSetChanged();
+
+                                    mList2.clear();
+                                    adapter2.notifyDataSetChanged();
+
+                                    mList1.clear();
+                                    adapter1.notifyDataSetChanged();
+
                                     //Failed...
-                                    Toast.makeText(getActivity(), R.string.no_slots, Toast.LENGTH_SHORT).show();
+                                    //Toast.makeText(getActivity(), R.string.no_slots, Toast.LENGTH_SHORT).show();
                                     String str = getResources().getString(R.string.morning) + System.getProperty("line.separator") + getResources().getString(R.string.not_available);
                                     ((TextView) findViewById(R.id.text1)) .setText(str);
 

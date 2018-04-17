@@ -61,6 +61,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:visibility="gone"
                 android:id="@+id/confirm"
                 android:background="@drawable/confirm_samir_abbas"
                 android:layout_width="match_parent"
@@ -70,9 +71,9 @@
                 android:layout_below="@+id/confirm"
                 android:id="@+id/banner"
                 android:scaleType="fitXY"
-                android:src="@drawable/sevices_samir_abbas_hospital"
+                android:src="@drawable/contact_us_samir_abbas"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_150sdp" />
+                android:layout_height="@dimen/_220sdp" />
 
 
             <android.support.v7.widget.RecyclerView

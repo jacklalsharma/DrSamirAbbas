@@ -50,7 +50,7 @@ public class PatientDetailsActivity extends BaseActivity {
         String speciality = getIntent().getStringExtra("speciality");
 
         ((TextView) findViewById(R.id.docNameTextView)).setText("Dr. " + doctor.getName());
-        ((TextView) findViewById(R.id.occupationTextView)).setText(doctor.getSpecilization());
+        ((TextView) findViewById(R.id.occupationTextView)).setText(speciality);
         ((TextView) findViewById(R.id.qualificationTextView)).setText(doctor.getDegree());
         Glide.with(this).load(doctor.getProfilePictureUrl()).into(((ImageView) findViewById(R.id.profile)));
 
@@ -95,7 +95,7 @@ public class PatientDetailsActivity extends BaseActivity {
         Intent intent = new Intent(this, SummaryActivity.class);
         intent.putExtra("doctor", doctor);
         intent.putExtra("slot", slot);
-        intent.putExtra("speciality", doctor.getSpecilization());
+        intent.putExtra("speciality", getIntent().getStringExtra("speciality"));
         intent.putExtra("name", name.getText().toString());
         intent.putExtra("id", id.getText().toString());
         intent.putExtra("number", number.getText().toString());

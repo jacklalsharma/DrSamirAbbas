@@ -400,7 +400,9 @@
         android:layout_height="@dimen/_77sdp" />
 
     <Button
-        android:layout_margin="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
         android:layout_alignParentBottom="true"
         android:layout_gravity="center_horizontal"
         android:id="@+id/bookAppointmentButton"

@@ -6,9 +6,9 @@ package com.dr.SamirAbbas.utils;
 
 public class Endpoints {
 
-    public static final String BASE = "https://hospoital.000webhostapp.com/";
+    public static final String BASE = "http://www.bhavikagarwal.com/";
 
-    public static final String BaseURL = "https://hospoital.000webhostapp.com/booking/apis";
+    public static final String BaseURL = BASE + "booking/apis";
 
     public static final String SpecialityList = BaseURL + "/get_specializations";
 
