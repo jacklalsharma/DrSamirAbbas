@@ -58,6 +58,7 @@ public class FindAndBookActivity extends BaseActivity {
 
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
+        recyclerView.setNestedScrollingEnabled(false);
         getList();
 
         findViewById(R.id.searchDocText).setOnClickListener(new View.OnClickListener() {
@@ -93,6 +94,7 @@ public class FindAndBookActivity extends BaseActivity {
                                     Specializations specializations = new Gson().fromJson(object.toString(), Specializations.class);
                                     mList.addAll(specializations.getData().getSpecializations());
                                     adapter.notifyDataSetChanged();
+                                    findViewById(R.id.logo).setVisibility(View.VISIBLE);
                                 }else{
 
                                 }

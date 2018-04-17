@@ -7,7 +7,7 @@
 
     <string name="action_settings">Settings</string>
     <string name="language">English</string>
-    <string name="home">HOME</string>
+    <string name="home">Home</string>
     <string name="book_appointment">Book An Appointment</string>
     <string name="doctors_list">Doctors</string>
     <string name="services">Services</string>
@@ -30,8 +30,8 @@
     <string name="search_doc">Search a doctor</string>
     <string name="choose_specialist">Choose Specialist</string>
     <string name="women_health">Women Health</string>
-    <string name="About_us">ABOUT US</string>
-    <string name="share_app">SHARE APP</string>
+    <string name="About_us">About us</string>
+    <string name="share_app">Share app</string>
     <string name="contact_us">Contact us</string>
     <string name="summary">Summary</string>
     <string name="confirmation">Confirmation</string>

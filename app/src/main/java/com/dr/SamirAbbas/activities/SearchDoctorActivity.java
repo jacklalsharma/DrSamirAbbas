@@ -118,7 +118,6 @@ public class SearchDoctorActivity extends BaseActivity{
 
     //Gets the Doctor list for selected specialization....
     private void getDoctorsList(){
-        DialogBox.ShowProgressDialog(this, R.string.getting_doctor, R.string.getting_doctor_msg);
 
         Date c = Calendar.getInstance().getTime();
         System.out.println("Current time => " + c);
@@ -194,7 +193,8 @@ public class SearchDoctorActivity extends BaseActivity{
 
 
     private void getSpecialityList(){
-        DialogBox.ShowProgressDialog(this, R.string.getting_special, R.string.getting_special_msg);
+        //DialogBox.ShowProgressDialog(this, R.string.getting_special, R.string.getting_special_msg);
+        DialogBox.ShowProgressDialog(this, R.string.getting_doctor, R.string.getting_doctor_msg);
 
         Ion.with(this)
                 .load("GET", Endpoints.SpecialityList)
@@ -203,7 +203,6 @@ public class SearchDoctorActivity extends BaseActivity{
                 .setCallback(new FutureCallback<JsonObject>() {
                     @Override
                     public void onCompleted(Exception e, JsonObject result) {
-                        DialogBox.DismissProgressDialog();
                         if(result != null){
                             try{
                                 JSONObject object = new JSONObject(result.toString());
@@ -225,15 +224,18 @@ public class SearchDoctorActivity extends BaseActivity{
 
 
                                 }else{
+                                    DialogBox.DismissProgressDialog();
 
                                 }
                             }catch (JSONException e1){
+                                DialogBox.DismissProgressDialog();
 
                             }
 
 
                         }else{
                             //Failed...
+                            DialogBox.DismissProgressDialog();
                         }
                     }
                 });

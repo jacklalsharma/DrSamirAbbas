@@ -89,7 +89,7 @@ public class ServicesAdapter extends RecyclerView.Adapter<ServicesAdapter.Servic
                 Intent intent = new Intent(activity, ImageViewerActivity.class);
                 intent.putExtra("image", res[position]);
                 intent.putExtra("title", heading[position]);
-                activity.startActivity(intent);
+                //activity.startActivity(intent);
             }
         });
         holder.image.setImageResource(res[position]);

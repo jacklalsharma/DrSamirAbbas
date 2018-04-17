@@ -59,12 +59,20 @@
             android:descendantFocusability="blocksDescendants"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
+                android:id="@+id/confirm"
+                android:background="@drawable/confirm_samir_abbas"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp" />
+
+            <ImageView
+                android:layout_below="@+id/confirm"
                 android:id="@+id/banner"
                 android:scaleType="fitXY"
                 android:src="@drawable/sevices_samir_abbas_hospital"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_200sdp" />
+                android:layout_height="@dimen/_150sdp" />
 
 
             <android.support.v7.widget.RecyclerView

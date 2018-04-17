@@ -100,20 +100,40 @@
         android:padding="@dimen/_10sdp"
         android:layout_below="@+id/orTextView"/>
 
+    <android.support.v4.widget.NestedScrollView
+        android:layout_below="@+id/chooseTextView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:src="@drawable/logo"
-        android:layout_width="@dimen/_70sdp"
-        android:layout_height="@dimen/_77sdp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-   <android.support.v7.widget.RecyclerView
-       android:id="@+id/categoryRecyclerView"
-       android:layout_below="@+id/chooseTextView"
-       android:layout_width="match_parent"
-       android:layout_margin="@dimen/_10sdp"
-       android:layout_height="match_parent">
 
-   </android.support.v7.widget.RecyclerView>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/categoryRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/logo"
+                android:layout_below="@+id/categoryRecyclerView"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/logo"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_77sdp" />
+
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
 </RelativeLayout>
