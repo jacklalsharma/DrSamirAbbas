@@ -78,7 +78,7 @@
                 <ImageView
                     android:background="@drawable/confirm_samir_abbas"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_70sdp" />
+                    android:layout_height="@dimen/_80sdp" />
 
                 <TextView
                     android:textAllCaps="true"
